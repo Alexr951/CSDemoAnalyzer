@@ -1,0 +1,216 @@
+---
+title: Dust_2 B Site Analysis
+date: '2025-08-25'
+description: Analysis of B Site of Dust 2
+categories:
+  - Dust_2
+format:
+  html: default
+  ipynb:
+    jupyter:
+      kernelspec:
+        display_name: Python
+        language: python3
+        name: python3
+---
+
+# Description
+
+The demo is from [Spirit vs G2 at Blast Bounty 2025 Season 2](https://www.hltv.org/matches/2384142/g2-vs-spirit-blast-bounty-2025-season-2).
+
+## Analysis
+
+```{python}
+#!pip install awpy
+from awpy import Demo
+
+dem = Demo("demos\g2-vs-spirit-m3-dust2.dem")
+dem.parse()
+dem.header
+```
+
+Coordinates for analysis
+```{python}
+import polars as pl
+# Classify utility locations (approximate Dust2 coordinates)
+def classify_molly_location(x, y):
+    if -600 <= x <= -200 and -1200 <= y <= -900:
+        return "Tunnels entrance"
+    elif -100 <= x <= 100 and -800 <= y <= -700:
+        return "Car/Default plant"
+    elif -300 <= x <= 200 and -900 <= y <= -600:
+        return "Site area"
+    else:
+        return f"Other location ({x:.0f}, {y:.0f})"
+
+def classify_smoke_location(x, y):
+    if -600 <= x <= -200 and -1200 <= y <= -900:
+        return "Tunnels mouth"
+    elif -100 <= x <= 100 and -800 <= y <= -700:
+        return "Site smoke"
+    elif 200 <= x <= 400 and -900 <= y <= -700:
+        return "Window smoke"
+    else:
+        return f"Other location ({x:.0f}, {y:.0f})"
+
+def classify_flash_location(x, y):
+    if -600 <= x <= -200 and -1200 <= y <= -900:
+        return "Tunnels flash"
+    elif -300 <= x <= 200 and -900 <= y <= -600:
+        return "Site flash"
+    elif 200 <= x <= 400 and -900 <= y <= -700:
+        return "Mid/Window flash"
+    else:
+        return f"Other location ({x:.0f}, {y:.0f})"
+```
+
+B-Site CT Anchoring Analysis Function
+```{python}
+def analyze_b_site_anchoring(dem, round_numbers=None):
+    tick_rate = 128  # Adjust based on demo
+    print("=== B-Site CT Anchoring Analysis ===\n")
+
+    # Available rounds for context
+    print("Available rounds in demo:")
+    print(dem.rounds.select(["round_num", "winner", "reason", "bomb_site"]))
+    print()
+
+    # Check available columns in ticks data
+    print("Available columns in ticks:")
+    print(dem.ticks.columns)
+    print()
+
+    # Specify rounds or analyze all
+    if round_numbers:
+        target_rounds = round_numbers
+    else:
+        target_rounds = dem.rounds["round_num"].unique().to_list()
+    
+    for round_num in target_rounds:
+        print(f"\n{'='*20} ROUND {round_num} {'='*20}")
+        round_info = dem.rounds.filter(pl.col("round_num") == round_num)
+        if round_info.is_empty():
+            continue
+
+        # Fix: Extract scalar values properly
+        freeze_end = round_info.select("freeze_end").item()
+        winner = round_info.select("winner").item()
+        reason = round_info.select("reason").item()
+        
+        time_1_50 = freeze_end + (35 * tick_rate)  # 1:50 after freeze
+        time_1_20 = freeze_end + (65 * tick_rate)  # 1:20 after freeze
+
+        print(f"Round {round_num} - Analyzing ticks {time_1_50} to {time_1_20}")
+        print(f"Winner: {winner} | Reason: {reason}")
+
+        # CT player B-site positioning during early round
+        # Fix: Use "place" instead of "player_last_place_name"
+        b_site_positions = dem.ticks.filter(
+            (pl.col("tick").is_between(time_1_50, time_1_20)) &
+            (pl.col("round_num") == round_num) &
+            (pl.col("place").str.contains("BSite|Tunnels|BackPlatform|Window|BPlatform|Tunnel") |
+             pl.col("place").is_null())
+        )
+
+        if not b_site_positions.is_empty():
+            print(f"\nPlayers in B-site area during early round:")
+            player_positions = b_site_positions.group_by("name").agg([
+                pl.col("place").mode().first().alias("most_common_position"),
+                pl.col("tick").count().alias("ticks_in_area"),
+                pl.col("X").mean().alias("avg_x"),
+                pl.col("Y").mean().alias("avg_y"),
+                pl.col("side").mode().first().alias("team")  # Get team info
+            ]).sort("ticks_in_area", descending=True)
+            print(player_positions)
+            
+            # Filter for CT players specifically
+            ct_positions = player_positions.filter(pl.col("team") == "CT")
+            if not ct_positions.is_empty():
+                print("\nCT Players only:")
+                print(ct_positions)
+        else:
+            print("No players found in B-site area during this timeframe")
+
+        # Utility: Molotovs
+        if hasattr(dem, 'infernos') and not dem.infernos.is_empty():
+            round_mollies = dem.infernos.filter(
+                (pl.col("start_tick").is_between(time_1_50, time_1_20)) &
+                (pl.col("round_num") == round_num)
+            )
+            if not round_mollies.is_empty():
+                print(f"\nMolotov/Incendiary usage (Round {round_num}):")
+                for row in round_mollies.iter_rows(named=True):
+                    location = classify_molly_location(row["X"], row["Y"])
+                    tick_time = (row["start_tick"] - freeze_end) / tick_rate
+                    print(f"  - {row['thrower_name']}: {location} at {tick_time:.1f}s into round")
+
+        # Utility: Smokes
+        if hasattr(dem, 'smokes') and not dem.smokes.is_empty():
+            round_smokes = dem.smokes.filter(
+                (pl.col("start_tick").is_between(time_1_50, time_1_20)) &
+                (pl.col("round_num") == round_num)
+            )
+            if not round_smokes.is_empty():
+                print(f"\nSmoke usage (Round {round_num}):")
+                for row in round_smokes.iter_rows(named=True):
+                    location = classify_smoke_location(row["X"], row["Y"])
+                    tick_time = (row["start_tick"] - freeze_end) / tick_rate
+                    print(f"  - {row['thrower_name']}: {location} at {tick_time:.1f}s into round")
+
+        # Utility: Flashbangs
+        if hasattr(dem, 'grenades') and not dem.grenades.is_empty():
+            round_flashes = dem.grenades.filter(
+                (pl.col("tick").is_between(time_1_50, time_1_20)) &
+                (pl.col("round_num") == round_num) &
+                (pl.col("grenade_type") == "flashbang")
+            )
+            if not round_flashes.is_empty():
+                print(f"\nFlashbang usage (Round {round_num}):")
+                for row in round_flashes.iter_rows(named=True):
+                    location = classify_flash_location(row["X"], row["Y"])
+                    tick_time = (row["tick"] - freeze_end) / tick_rate
+                    print(f"  - {row['thrower']}: {location} at {tick_time:.1f}s into round")
+
+        # Check for weapon fire/shots
+        if hasattr(dem, 'shots') and not dem.shots.is_empty():
+            round_shots = dem.shots.filter(
+                (pl.col("tick").is_between(time_1_50, time_1_20)) &
+                (pl.col("round_num") == round_num)
+            )
+            if not round_shots.is_empty():
+                print(f"\nWeapon fire during timeframe (Round {round_num}):")
+                shots_summary = round_shots.group_by("player_name").agg([
+                    pl.col("weapon").mode().first().alias("primary_weapon"),
+                    pl.col("tick").count().alias("shots_fired")
+                ])
+                print(shots_summary)
+```
+
+Run the analysis
+
+```{python}
+# Focus on rounds where bomb was planted/exploded at B-site
+b_site_rounds = dem.rounds.filter(pl.col("bomb_site") == "bombsite_b")["round_num"].to_list()
+print(f"B-site rounds: {b_site_rounds}")
+
+# Run analysis on B-site rounds specifically
+analyze_b_site_anchoring(dem, round_numbers=b_site_rounds)
+
+```
+
+Debug
+```{python}
+# First, let's see what data is available in your demo
+print("Available demo attributes:")
+for attr in dir(dem):
+    if not attr.startswith('_') and hasattr(dem, attr):
+        try:
+            obj = getattr(dem, attr)
+            if hasattr(obj, 'shape'):
+                print(f"{attr}: {obj.shape}")
+            elif hasattr(obj, '__len__'):
+                print(f"{attr}: length {len(obj)}")
+        except:
+            print(f"{attr}: available")
+
+```

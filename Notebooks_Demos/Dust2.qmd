@@ -67,18 +67,18 @@ def classify_flash_location(x, y):
 B-Site CT Anchoring Analysis Function
 ```{python}
 def analyze_b_site_anchoring(dem, round_numbers=None):
-    tick_rate = 128  # Adjust based on demo
-    print("=== B-Site CT Anchoring Analysis ===\n")
+    tick_rate = 64  # Adjust based on demo
+    #print("=== B-Site CT Anchoring Analysis ===\n")
 
     # Available rounds for context
-    print("Available rounds in demo:")
-    print(dem.rounds.select(["round_num", "winner", "reason", "bomb_site"]))
-    print()
+    #print("Available rounds in demo:")
+    #print(dem.rounds.select(["round_num", "winner", "reason", "bomb_site"]))
+    #print()
 
     # Check available columns in ticks data
-    print("Available columns in ticks:")
-    print(dem.ticks.columns)
-    print()
+    #print("Available columns in ticks:")
+    #print(dem.ticks.columns)
+    #print()
 
     # Specify rounds or analyze all
     if round_numbers:
@@ -104,7 +104,6 @@ def analyze_b_site_anchoring(dem, round_numbers=None):
         print(f"Winner: {winner} | Reason: {reason}")
 
         # CT player B-site positioning during early round
-        # Fix: Use "place" instead of "player_last_place_name"
         b_site_positions = dem.ticks.filter(
             (pl.col("tick").is_between(time_1_50, time_1_20)) &
             (pl.col("round_num") == round_num) &
@@ -171,46 +170,5 @@ def analyze_b_site_anchoring(dem, round_numbers=None):
                     tick_time = (row["tick"] - freeze_end) / tick_rate
                     print(f"  - {row['thrower']}: {location} at {tick_time:.1f}s into round")
 
-        # Check for weapon fire/shots
-        if hasattr(dem, 'shots') and not dem.shots.is_empty():
-            round_shots = dem.shots.filter(
-                (pl.col("tick").is_between(time_1_50, time_1_20)) &
-                (pl.col("round_num") == round_num)
-            )
-            if not round_shots.is_empty():
-                print(f"\nWeapon fire during timeframe (Round {round_num}):")
-                shots_summary = round_shots.group_by("player_name").agg([
-                    pl.col("weapon").mode().first().alias("primary_weapon"),
-                    pl.col("tick").count().alias("shots_fired")
-                ])
-                print(shots_summary)
-```
-
-Run the analysis
-
-```{python}
-# Focus on rounds where bomb was planted/exploded at B-site
-b_site_rounds = dem.rounds.filter(pl.col("bomb_site") == "bombsite_b")["round_num"].to_list()
-print(f"B-site rounds: {b_site_rounds}")
-
-# Run analysis on B-site rounds specifically
-analyze_b_site_anchoring(dem, round_numbers=b_site_rounds)
-
-```
-
-Debug
-```{python}
-# First, let's see what data is available in your demo
-print("Available demo attributes:")
-for attr in dir(dem):
-    if not attr.startswith('_') and hasattr(dem, attr):
-        try:
-            obj = getattr(dem, attr)
-            if hasattr(obj, 'shape'):
-                print(f"{attr}: {obj.shape}")
-            elif hasattr(obj, '__len__'):
-                print(f"{attr}: length {len(obj)}")
-        except:
-            print(f"{attr}: available")
-
+analyze_b_site_anchoring(dem)                
 ```

@@ -172,3 +172,113 @@ def analyze_b_site_anchoring(dem, round_numbers=None):
 
 analyze_b_site_anchoring(dem)                
 ```
+
+Looking at coordiantes
+```{python}
+import polars as pl
+
+def analyze_ct_b_site_comprehensive(dem, round_numbers=None):
+    """Comprehensive CT B-site analysis that handles various data formats"""
+    tick_rate = 64
+    print("=== CT B-Site Anchoring Analysis ===\n")
+    
+    if round_numbers is not None:
+        target_rounds = round_numbers
+    else:
+        target_rounds = dem.rounds["round_num"].unique().to_list()
+    
+    print(f"Analyzing {len(target_rounds)} rounds total")
+    
+    # First, let's determine the correct side value for CT
+    sample_ticks = dem.ticks.head(1000)
+    unique_sides = sample_ticks["side"].unique().to_list()
+    print(f"Available sides in demo: {unique_sides}")
+    
+    # Determine correct CT side value
+    ct_side_value = None
+    for side in unique_sides:
+        if side and ("ct" in side.lower() or "counter" in side.lower()):
+            ct_side_value = side
+            break
+    
+    if ct_side_value is None:
+        # Fallback: assume CT is one of the sides
+        ct_side_value = unique_sides[0] if unique_sides else "CT"
+    
+    print(f"Using '{ct_side_value}' as CT side identifier\n")
+    
+    for round_num in target_rounds:
+        round_info = dem.rounds.filter(pl.col("round_num") == round_num)
+        if round_info.is_empty():
+            continue
+            
+        freeze_end = round_info.select("freeze_end").item()
+        winner = round_info.select("winner").item()
+        reason = round_info.select("reason").item()
+        
+        time_1_50 = freeze_end + (35 * tick_rate)
+        time_1_20 = freeze_end + (65 * tick_rate)
+        
+        print(f"\n{'='*20} ROUND {round_num} {'='*20}")
+        print(f"Winner: {winner} | Reason: {reason}")
+        
+        # Get all CT ticks in time window
+        ct_ticks = dem.ticks.filter(
+            (pl.col("tick").is_between(time_1_50, time_1_20)) &
+            (pl.col("round_num") == round_num) &
+            (pl.col("side") == ct_side_value)
+        )
+        
+        if ct_ticks.is_empty():
+            print("No CT players found in this round window")
+            continue
+        
+        # Group by player to find positions
+        ct_players = ct_ticks.group_by("name").agg([
+            pl.col("tick").count().alias("tick_count"),
+            pl.col("X").mean().alias("avg_x"),
+            pl.col("Y").mean().alias("avg_y"),
+            pl.col("place").mode().first().alias("common_place")
+        ]).sort("tick_count", descending=True)
+        
+        print(f"\nAll CT players in round:")
+        for row in ct_players.iter_rows(named=True):
+            # Classify position based on place name and coordinates
+            position_desc = classify_position(row['avg_x'], row['avg_y'], row['common_place'])
+            print(f"  - {row['name']}: {position_desc}")
+            print(f"    Ticks: {row['tick_count']}, Coords: ({row['avg_x']:.0f}, {row['avg_y']:.0f}), Place: {row['common_place']}")
+        
+        # Identify likely B players (those with B-related place names or coordinates)
+        b_players = ct_players.filter(
+            (pl.col("common_place").str.contains("(?i)tunnel|bsite|site|platform|car|window|back", strict=False)) |
+            # Also include players in approximate B coordinates (adjust based on your map)
+            ((pl.col("avg_x").is_between(-3000, 1000)) & (pl.col("avg_y").is_between(-2000, 3000)))
+        )
+        
+        if not b_players.is_empty():
+            print(f"\nLikely B-area defenders:")
+            for row in b_players.iter_rows(named=True):
+                position_desc = classify_position(row['avg_x'], row['avg_y'], row['common_place'])
+                print(f"  ★ {row['name']}: {position_desc}")
+
+def classify_position(x, y, place):
+    """Classify player position for readability"""
+    if place and isinstance(place, str):
+        place_lower = place.lower()
+        if "tunnel" in place_lower:
+            return f"Tunnels ({place})"
+        elif any(word in place_lower for word in ["site", "bsite", "platform", "car", "window", "back"]):
+            return f"B-Site Area ({place})"
+    
+    # Coordinate-based classification (you may need to adjust these based on your specific demo)
+    if -2000 <= x <= 0 and 0 <= y <= 2000:
+        return f"Possible B Area ({x:.0f}, {y:.0f})"
+    else:
+        return f"Other Position ({x:.0f}, {y:.0f})"
+
+# Usage - run this instead of the previous function
+analyze_ct_b_site_comprehensive(dem)
+
+```
+
+Need to go through and map the coords. 

@@ -281,4 +281,178 @@ analyze_ct_b_site_comprehensive(dem)
 
 ```
 
-Need to go through and map the coords. 
+## Coordinate Map to correctly identify player positions 
+
+```{python}
+dem = Demo("demos\\g2-vs-spirit-m3-dust2.dem")
+dem.parse()
+
+# Get player positions
+positions = dem.ticks.filter(pl.col("health") > 0)[["X", "Y", "Z", "name", "side"]]
+```
+
+```{python}
+!awpy get maps
+```
+
+```{python}
+import awpy
+
+awpy.plot.plot(map_name="de_dust2", points=[(x, y, z)])
+```
+
+
+Areas for B-Site 
+
+Back Plat (X:77, Y:15 to X:135, Y: 83)
+Single Barrel: (X:136, Y:78 to X:164, Y:106)
+Double Barrels: (X:130, Y:110 to X:163, Y:140)
+Second Cubby: (X:59, Y:239 to X:78, Y:263)
+Close Left (X:67, Y:304 to X:94, Y:328)
+Doors (X:250, Y:212 to X:295, Y:270)
+Top Car Box (X:139, Y: 311 to X:157, Y:327)
+B-Site (X:170, Y:80 to X:256, Y:175)
+Default (X: 229, Y:151 to X:257, Y:190)
+Back site Tucked (X: 234, Y:94 to X:254, Y:118) 
+Window (X:243, Y: 118 to X:282, Y: 146)
+Big Box B Site (X:128, Y:145 to X:171, Y: 185)
+Car B-Site (X:170, Y:284 to X:255, Y:370)
+Tunnel Exit (X:94, Y:326 to X: 126, Y:415)
+Can add more here
+
+Whole B-Site (X:55, Y:11 to X:392, Y:380) 
+
+Map them and see the coordiates are correct 
+
+```{python}
+
+from awpy import Demo
+import polars as pl
+
+# Your B-Site area coordinates (converted from pixels to map coordinates)
+def classify_b_site_position(x, y):
+    # Back site Tucked (most specific first)
+    if -1573 <= x <= -1496 and 1213 <= y <= 1331:
+        return "Back site Tucked"
+
+    # Single Barrel
+    elif -1951 <= x <= -1843 and 1272 <= y <= 1409:
+        return "Single Barrel"
+
+    # Double Barrels
+    elif -1974 <= x <= -1847 and 1105 <= y <= 1253:
+        return "Double Barrels"
+
+    # Window
+    elif -1538 <= x <= -1388 and 1076 <= y <= 1213:
+        return "Window"
+
+    # Default
+    elif -1592 <= x <= -1484 and 860 <= y <= 1051:
+        return "Default"
+
+    # Big Box B Site
+    elif -1982 <= x <= -1816 and 885 <= y <= 1081:
+        return "Big Box B Site"
+
+    # Back Plat
+    elif -2179 <= x <= -1955 and 1385 <= y <= 1718:
+        return "Back Plat"
+
+    # Doors
+    elif -1511 <= x <= -1337 and 468 <= y <= 752:
+        return "Doors"
+
+    # Car B-Site
+    elif -1820 <= x <= -1492 and -23 <= y <= 399:
+        return "Car B-Site"
+
+    # Tunnel Exit
+    elif -2113 <= x <= -1990 and -243 <= y <= 193:
+        return "Tunnel Exit"
+
+    # Top Car Box
+    elif -1940 <= x <= -1870 and 188 <= y <= 267:
+        return "Top Car Box"
+
+    # Close Left
+    elif -2217 <= x <= -2113 and 183 <= y <= 301:
+        return "Close Left"
+
+    # Second Cubby
+    elif -2248 <= x <= -2175 and 502 <= y <= 620:
+        return "Second Cubby"
+
+    # General B-Site (less specific)
+    elif -1820 <= x <= -1488 and 934 <= y <= 1400:
+        return "B-Site General"
+
+    # Whole B-Site (broadest)
+    elif -2264 <= x <= -963 and -72 <= y <= 1738:
+        return "B-Site Area"
+
+    return "Not in B-Site"
+
+# Load your demo
+dem = Demo("demos\\g2-vs-spirit-m3-dust2.dem")
+dem.parse()
+
+print("Demo loaded successfully!")
+print(f"Total rounds: {dem.ticks['round_num'].max()}")
+
+# Test for 2 rounds
+print("\nTesting B-Site detection for rounds 1-2...")
+
+detections = []
+round_1_2_data = dem.ticks.filter(
+    (dem.ticks["round_num"] <= 2) & 
+    (dem.ticks["health"] > 0)
+)
+
+for row in round_1_2_data.iter_rows(named=True):
+    x, y = row["X"], row["Y"]
+    area = classify_b_site_position(x, y)
+
+    if area != "Not in B-Site":
+        detections.append({
+            "tick": row["tick"],
+            "round": row["round_num"],
+            "player": row["name"],
+            "side": row["side"],
+            "area": area,
+            "x": round(x),
+            "y": round(y)
+        })
+
+print(f"\nFound {len(detections)} B-Site detections in rounds 1-2:")
+print("-" * 70)
+
+if detections:
+    for det in detections[:25]:  # Show first 25
+        print(f"Round {det['round']} | Tick {det['tick']:5} | {det['player']:12} ({det['side']:2}) | "
+              f"{det['area']:18} | ({det['x']:4}, {det['y']:4})")
+
+    if len(detections) > 25:
+        print(f"... and {len(detections) - 25} more")
+
+    # Summary
+    print("\n" + "="*50)
+    print("SUMMARY BY AREA")
+    print("="*50)
+    area_counts = {}
+    for det in detections:
+        area_counts[det['area']] = area_counts.get(det['area'], 0) + 1
+
+    for area, count in sorted(area_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"{area:18}: {count:3} detections")
+
+else:
+    print("No B-Site detections found.")
+    print("\nTry checking a few sample coordinates:")
+    sample_coords = round_1_2_data.sample(10).select(["X", "Y", "name"]).to_dicts()
+    for coord in sample_coords:
+        x, y = coord["X"], coord["Y"]
+        area = classify_b_site_position(x, y)
+        print(f"{coord['name']:10}: ({x:6.0f}, {y:6.0f}) -> {area}")
+
+```

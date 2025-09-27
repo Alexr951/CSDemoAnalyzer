@@ -21,8 +21,14 @@ The demo is from [Spirit vs G2 at Blast Bounty 2025 Season 2](https://www.hltv.o
 ## Analysis
 
 ```{python}
-#!pip install awpy
+!pip install --force-reinstall --upgrade numpy awpy
+# After this cell finishes, restart the kernel manually, then run the next cells.
+```
+
+```{python}
+!pip install awpy
 from awpy import Demo
+import os
 
 dem = Demo("demos\g2-vs-spirit-m3-dust2.dem")
 dem.parse()

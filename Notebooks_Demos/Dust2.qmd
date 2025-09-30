@@ -19,14 +19,15 @@ format:
 The demo is from [Spirit vs G2 at Blast Bounty 2025 Season 2](https://www.hltv.org/matches/2384142/g2-vs-spirit-blast-bounty-2025-season-2).
 
 ## Analysis
-
+Package fix, can ignore for now
 ```{python}
-!pip install --force-reinstall --upgrade numpy awpy
+#!pip install --force-reinstall --upgrade numpy awpy
 # After this cell finishes, restart the kernel manually, then run the next cells.
 ```
 
+Import our demo and libraries. 
 ```{python}
-!pip install awpy
+#!pip install awpy
 from awpy import Demo
 import os
 
@@ -35,279 +36,9 @@ dem.parse()
 dem.header
 ```
 
-Coordinates for analysis
-```{python}
-import polars as pl
-# Classify utility locations (approximate Dust2 coordinates)
-def classify_molly_location(x, y):
-    if -600 <= x <= -200 and -1200 <= y <= -900:
-        return "Tunnels entrance"
-    elif -100 <= x <= 100 and -800 <= y <= -700:
-        return "Car/Default plant"
-    elif -300 <= x <= 200 and -900 <= y <= -600:
-        return "Site area"
-    else:
-        return f"Other location ({x:.0f}, {y:.0f})"
 
-def classify_smoke_location(x, y):
-    if -600 <= x <= -200 and -1200 <= y <= -900:
-        return "Tunnels mouth"
-    elif -100 <= x <= 100 and -800 <= y <= -700:
-        return "Site smoke"
-    elif 200 <= x <= 400 and -900 <= y <= -700:
-        return "Window smoke"
-    else:
-        return f"Other location ({x:.0f}, {y:.0f})"
-
-def classify_flash_location(x, y):
-    if -600 <= x <= -200 and -1200 <= y <= -900:
-        return "Tunnels flash"
-    elif -300 <= x <= 200 and -900 <= y <= -600:
-        return "Site flash"
-    elif 200 <= x <= 400 and -900 <= y <= -700:
-        return "Mid/Window flash"
-    else:
-        return f"Other location ({x:.0f}, {y:.0f})"
-```
-
-B-Site CT Anchoring Analysis Function
-```{python}
-def analyze_b_site_anchoring(dem, round_numbers=None):
-    tick_rate = 64  # Adjust based on demo
-    #print("=== B-Site CT Anchoring Analysis ===\n")
-
-    # Available rounds for context
-    #print("Available rounds in demo:")
-    #print(dem.rounds.select(["round_num", "winner", "reason", "bomb_site"]))
-    #print()
-
-    # Check available columns in ticks data
-    #print("Available columns in ticks:")
-    #print(dem.ticks.columns)
-    #print()
-
-    # Specify rounds or analyze all
-    if round_numbers:
-        target_rounds = round_numbers
-    else:
-        target_rounds = dem.rounds["round_num"].unique().to_list()
-    
-    for round_num in target_rounds:
-        print(f"\n{'='*20} ROUND {round_num} {'='*20}")
-        round_info = dem.rounds.filter(pl.col("round_num") == round_num)
-        if round_info.is_empty():
-            continue
-
-        # Fix: Extract scalar values properly
-        freeze_end = round_info.select("freeze_end").item()
-        winner = round_info.select("winner").item()
-        reason = round_info.select("reason").item()
-        
-        time_1_50 = freeze_end + (35 * tick_rate)  # 1:50 after freeze
-        time_1_20 = freeze_end + (65 * tick_rate)  # 1:20 after freeze
-
-        print(f"Round {round_num} - Analyzing ticks {time_1_50} to {time_1_20}")
-        print(f"Winner: {winner} | Reason: {reason}")
-
-        # CT player B-site positioning during early round
-        b_site_positions = dem.ticks.filter(
-            (pl.col("tick").is_between(time_1_50, time_1_20)) &
-            (pl.col("round_num") == round_num) &
-            (pl.col("place").str.contains("BSite|Tunnels|BackPlatform|Window|BPlatform|Tunnel") |
-             pl.col("place").is_null())
-        )
-
-        if not b_site_positions.is_empty():
-            print(f"\nPlayers in B-site area during early round:")
-            player_positions = b_site_positions.group_by("name").agg([
-                pl.col("place").mode().first().alias("most_common_position"),
-                pl.col("tick").count().alias("ticks_in_area"),
-                pl.col("X").mean().alias("avg_x"),
-                pl.col("Y").mean().alias("avg_y"),
-                pl.col("side").mode().first().alias("team")  # Get team info
-            ]).sort("ticks_in_area", descending=True)
-            print(player_positions)
-            
-            # Filter for CT players specifically
-            ct_positions = player_positions.filter(pl.col("team") == "CT")
-            if not ct_positions.is_empty():
-                print("\nCT Players only:")
-                print(ct_positions)
-        else:
-            print("No players found in B-site area during this timeframe")
-
-        # Utility: Molotovs
-        if hasattr(dem, 'infernos') and not dem.infernos.is_empty():
-            round_mollies = dem.infernos.filter(
-                (pl.col("start_tick").is_between(time_1_50, time_1_20)) &
-                (pl.col("round_num") == round_num)
-            )
-            if not round_mollies.is_empty():
-                print(f"\nMolotov/Incendiary usage (Round {round_num}):")
-                for row in round_mollies.iter_rows(named=True):
-                    location = classify_molly_location(row["X"], row["Y"])
-                    tick_time = (row["start_tick"] - freeze_end) / tick_rate
-                    print(f"  - {row['thrower_name']}: {location} at {tick_time:.1f}s into round")
-
-        # Utility: Smokes
-        if hasattr(dem, 'smokes') and not dem.smokes.is_empty():
-            round_smokes = dem.smokes.filter(
-                (pl.col("start_tick").is_between(time_1_50, time_1_20)) &
-                (pl.col("round_num") == round_num)
-            )
-            if not round_smokes.is_empty():
-                print(f"\nSmoke usage (Round {round_num}):")
-                for row in round_smokes.iter_rows(named=True):
-                    location = classify_smoke_location(row["X"], row["Y"])
-                    tick_time = (row["start_tick"] - freeze_end) / tick_rate
-                    print(f"  - {row['thrower_name']}: {location} at {tick_time:.1f}s into round")
-
-        # Utility: Flashbangs
-        if hasattr(dem, 'grenades') and not dem.grenades.is_empty():
-            round_flashes = dem.grenades.filter(
-                (pl.col("tick").is_between(time_1_50, time_1_20)) &
-                (pl.col("round_num") == round_num) &
-                (pl.col("grenade_type") == "flashbang")
-            )
-            if not round_flashes.is_empty():
-                print(f"\nFlashbang usage (Round {round_num}):")
-                for row in round_flashes.iter_rows(named=True):
-                    location = classify_flash_location(row["X"], row["Y"])
-                    tick_time = (row["tick"] - freeze_end) / tick_rate
-                    print(f"  - {row['thrower']}: {location} at {tick_time:.1f}s into round")
-
-analyze_b_site_anchoring(dem)                
-```
-
-Looking at coordiantes
-```{python}
-import polars as pl
-
-def analyze_ct_b_site_comprehensive(dem, round_numbers=None):
-    """Comprehensive CT B-site analysis that handles various data formats"""
-    tick_rate = 64
-    print("=== CT B-Site Anchoring Analysis ===\n")
-    
-    if round_numbers is not None:
-        target_rounds = round_numbers
-    else:
-        target_rounds = dem.rounds["round_num"].unique().to_list()
-    
-    print(f"Analyzing {len(target_rounds)} rounds total")
-    
-    # First, let's determine the correct side value for CT
-    sample_ticks = dem.ticks.head(1000)
-    unique_sides = sample_ticks["side"].unique().to_list()
-    print(f"Available sides in demo: {unique_sides}")
-    
-    # Determine correct CT side value
-    ct_side_value = None
-    for side in unique_sides:
-        if side and ("ct" in side.lower() or "counter" in side.lower()):
-            ct_side_value = side
-            break
-    
-    if ct_side_value is None:
-        # Fallback: assume CT is one of the sides
-        ct_side_value = unique_sides[0] if unique_sides else "CT"
-    
-    print(f"Using '{ct_side_value}' as CT side identifier\n")
-    
-    for round_num in target_rounds:
-        round_info = dem.rounds.filter(pl.col("round_num") == round_num)
-        if round_info.is_empty():
-            continue
-            
-        freeze_end = round_info.select("freeze_end").item()
-        winner = round_info.select("winner").item()
-        reason = round_info.select("reason").item()
-        
-        time_1_50 = freeze_end + (35 * tick_rate)
-        time_1_20 = freeze_end + (65 * tick_rate)
-        
-        print(f"\n{'='*20} ROUND {round_num} {'='*20}")
-        print(f"Winner: {winner} | Reason: {reason}")
-        
-        # Get all CT ticks in time window
-        ct_ticks = dem.ticks.filter(
-            (pl.col("tick").is_between(time_1_50, time_1_20)) &
-            (pl.col("round_num") == round_num) &
-            (pl.col("side") == ct_side_value)
-        )
-        
-        if ct_ticks.is_empty():
-            print("No CT players found in this round window")
-            continue
-        
-        # Group by player to find positions
-        ct_players = ct_ticks.group_by("name").agg([
-            pl.col("tick").count().alias("tick_count"),
-            pl.col("X").mean().alias("avg_x"),
-            pl.col("Y").mean().alias("avg_y"),
-            pl.col("place").mode().first().alias("common_place")
-        ]).sort("tick_count", descending=True)
-        
-        print(f"\nAll CT players in round:")
-        for row in ct_players.iter_rows(named=True):
-            # Classify position based on place name and coordinates
-            position_desc = classify_position(row['avg_x'], row['avg_y'], row['common_place'])
-            print(f"  - {row['name']}: {position_desc}")
-            print(f"    Ticks: {row['tick_count']}, Coords: ({row['avg_x']:.0f}, {row['avg_y']:.0f}), Place: {row['common_place']}")
-        
-        # Identify likely B players (those with B-related place names or coordinates)
-        b_players = ct_players.filter(
-            (pl.col("common_place").str.contains("(?i)tunnel|bsite|site|platform|car|window|back", strict=False)) |
-            # Also include players in approximate B coordinates (adjust based on your map)
-            ((pl.col("avg_x").is_between(-3000, 1000)) & (pl.col("avg_y").is_between(-2000, 3000)))
-        )
-        
-        if not b_players.is_empty():
-            print(f"\nLikely B-area defenders:")
-            for row in b_players.iter_rows(named=True):
-                position_desc = classify_position(row['avg_x'], row['avg_y'], row['common_place'])
-                print(f"  ★ {row['name']}: {position_desc}")
-
-def classify_position(x, y, place):
-    """Classify player position for readability"""
-    if place and isinstance(place, str):
-        place_lower = place.lower()
-        if "tunnel" in place_lower:
-            return f"Tunnels ({place})"
-        elif any(word in place_lower for word in ["site", "bsite", "platform", "car", "window", "back"]):
-            return f"B-Site Area ({place})"
-    
-    # Coordinate-based classification (you may need to adjust these based on your specific demo)
-    if -2000 <= x <= 0 and 0 <= y <= 2000:
-        return f"Possible B Area ({x:.0f}, {y:.0f})"
-    else:
-        return f"Other Position ({x:.0f}, {y:.0f})"
-
-# Usage - run this instead of the previous function
-analyze_ct_b_site_comprehensive(dem)
-
-```
 
 ## Coordinate Map to correctly identify player positions 
-
-```{python}
-dem = Demo("demos\\g2-vs-spirit-m3-dust2.dem")
-dem.parse()
-
-# Get player positions
-positions = dem.ticks.filter(pl.col("health") > 0)[["X", "Y", "Z", "name", "side"]]
-```
-
-```{python}
-!awpy get maps
-```
-
-```{python}
-import awpy
-
-awpy.plot.plot(map_name="de_dust2", points=[(x, y, z)])
-```
-
-
 Areas for B-Site 
 
 Back Plat (X:77, Y:15 to X:135, Y: 83)
@@ -331,7 +62,6 @@ Whole B-Site (X:55, Y:11 to X:392, Y:380)
 Map them and see the coordiates are correct 
 
 ```{python}
-
 from awpy import Demo
 import polars as pl
 
@@ -460,5 +190,207 @@ else:
         x, y = coord["X"], coord["Y"]
         area = classify_b_site_position(x, y)
         print(f"{coord['name']:10}: ({x:6.0f}, {y:6.0f}) -> {area}")
+```
 
+Testing changes to output and player location
+
+```{python}
+from awpy import Demo
+import polars as pl
+
+
+#  B-Site area coordinates (converted from pixels to map coordinates)
+def classify_b_site_position(x, y):
+    # Back site Tucked (most specific first)
+    if -1573 <= x <= -1496 and 1213 <= y <= 1331:
+        return "Back site Tucked"
+
+    # Single Barrel
+    elif -1951 <= x <= -1843 and 1272 <= y <= 1409:
+        return "Single Barrel"
+
+    # Double Barrels
+    elif -1974 <= x <= -1847 and 1105 <= y <= 1253:
+        return "Double Barrels"
+
+    # Window
+    elif -1538 <= x <= -1388 and 1076 <= y <= 1213:
+        return "Window"
+
+    # Default
+    elif -1592 <= x <= -1484 and 860 <= y <= 1051:
+        return "Default"
+
+    # Big Box B Site
+    elif -1982 <= x <= -1816 and 885 <= y <= 1081:
+        return "Big Box B Site"
+
+    # Back Plat
+    elif -2179 <= x <= -1955 and 1385 <= y <= 1718:
+        return "Back Plat"
+
+    # Doors
+    elif -1511 <= x <= -1337 and 468 <= y <= 752:
+        return "Doors"
+
+    # Car B-Site
+    elif -1820 <= x <= -1492 and -23 <= y <= 399:
+        return "Car B-Site"
+
+    # Tunnel Exit
+    elif -2113 <= x <= -1990 and -243 <= y <= 193:
+        return "Tunnel Exit"
+
+    # Top Car Box
+    elif -1940 <= x <= -1870 and 188 <= y <= 267:
+        return "Top Car Box"
+
+    # Close Left
+    elif -2217 <= x <= -2113 and 183 <= y <= 301:
+        return "Close Left"
+
+    # Second Cubby
+    elif -2248 <= x <= -2175 and 502 <= y <= 620:
+        return "Second Cubby"
+
+    # General B-Site (less specific)
+    elif -1820 <= x <= -1488 and 934 <= y <= 1400:
+        return "B-Site General"
+
+    # Whole B-Site (broadest)
+    elif -2264 <= x <= -963 and -72 <= y <= 1738:
+        return "B-Site Area"
+
+    return "Not in B-Site"
+
+
+def is_in_b_site_area(x, y):
+    """Check if coordinates are within the broad B-Site area"""
+    return -2264 <= x <= -963 and -72 <= y <= 1738
+
+
+# Load your demo
+dem = Demo("demos\\g2-vs-spirit-m3-dust2.dem")
+dem.parse()
+
+print("Demo loaded successfully!")
+print(f"Total rounds: {dem.ticks['round_num'].max()}")
+
+# Test for 2 rounds with 32-tick intervals (0.5 seconds)
+print("\nAnalyzing B-Site activity for rounds 1-2 (every 0.5 seconds)...")
+
+# Filter data for rounds 1-2 and alive players only
+round_1_2_data = dem.ticks.filter(
+    (dem.ticks["round_num"] <= 2) & 
+    (dem.ticks["health"] > 0)
+)
+
+# Get unique ticks and filter to every 32nd tick
+all_ticks = sorted(round_1_2_data["tick"].unique())
+interval_ticks = [tick for i, tick in enumerate(all_ticks) if i % 32 == 0]
+
+print(f"\nAnalyzing {len(interval_ticks)} time intervals across rounds 1-2...")
+
+# Collect detections for every 32nd tick
+detections = []
+b_site_presence = []
+
+for tick in interval_ticks:
+    tick_data = round_1_2_data.filter(pl.col("tick") == tick)
+
+    for row in tick_data.iter_rows(named=True):
+        x, y = row["X"], row["Y"]
+
+        # Check specific B-Site positions
+        area = classify_b_site_position(x, y)
+        if area != "Not in B-Site":
+            detections.append({
+                "tick": row["tick"],
+                "round": row["round_num"],
+                "player": row["name"],
+                "side": row["side"],
+                "area": area,
+                "x": round(x),
+                "y": round(y),
+                "time_seconds": round(tick / 64, 1)  # Convert tick to seconds (64 ticks = 1 second)
+            })
+
+        # Check broad B-Site area presence
+        if is_in_b_site_area(x, y):
+            b_site_presence.append({
+                "tick": row["tick"],
+                "round": row["round_num"],
+                "player": row["name"],
+                "side": row["side"],
+                "x": round(x),
+                "y": round(y),
+                "time_seconds": round(tick / 64, 1)
+            })
+
+print(f"\nFound {len(detections)} specific B-Site position detections:")
+print("=" * 80)
+
+if detections:
+    current_round = None
+    for det in detections:
+        if current_round != det['round']:
+            current_round = det['round']
+            print(f"\n--- ROUND {current_round} ---")
+
+        print(f"Time: {det['time_seconds']:5.1f}s | {det['player']:12} ({det['side']:2}) | "
+              f"{det['area']:18} | ({det['x']:4}, {det['y']:4})")
+
+    # Summary by area
+    print("\n" + "="*60)
+    print("SUMMARY BY SPECIFIC AREAS")
+    print("="*60)
+    area_counts = {}
+    for det in detections:
+        area_counts[det['area']] = area_counts.get(det['area'], 0) + 1
+
+    for area, count in sorted(area_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"{area:18}: {count:3} detections")
+else:
+    print("No specific B-Site position detections found.")
+
+# Show all players in broad B-Site area
+print(f"\n\nAll players in B-Site Area ({len(b_site_presence)} total detections):")
+print("=" * 80)
+
+if b_site_presence:
+    current_round = None
+    for presence in b_site_presence:
+        if current_round != presence['round']:
+            current_round = presence['round']
+            print(f"\n--- ROUND {current_round} - B-SITE AREA PRESENCE ---")
+
+        print(f"Time: {presence['time_seconds']:5.1f}s | {presence['player']:12} ({presence['side']:2}) | "
+              f"B-Site Area | ({presence['x']:4}, {presence['y']:4})")
+
+    # Summary by player and side for B-Site area
+    print("\n" + "="*60)
+    print("B-SITE AREA PRESENCE SUMMARY")
+    print("="*60)
+    player_counts = {}
+    side_counts = {"CT": 0, "T": 0}
+
+    for presence in b_site_presence:
+        player_key = f"{presence['player']} ({presence['side']})"
+        player_counts[player_key] = player_counts.get(player_key, 0) + 1
+        side = presence['side'].upper()
+        side_counts[side] += 1
+
+    print("\nBy Player:")
+    for player, count in sorted(player_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {player:20}: {count:3} detections")
+
+    print("\nBy Side:")
+    for side, count in side_counts.items():
+        print(f"  {side:20}: {count:3} detections")
+
+else:
+    print("No players found in B-Site area.")
+
+print("\n" + "="*80)
+print("Analysis complete!")
 ```

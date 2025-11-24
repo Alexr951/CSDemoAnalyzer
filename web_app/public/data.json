@@ -1,0 +1,71 @@
+{
+  "total_b_site_samples": 1500,
+  "positions": [
+    {
+      "area": "Car B-Site",
+      "count": 450,
+      "percentage": 30.0
+    },
+    {
+      "area": "Window",
+      "count": 300,
+      "percentage": 20.0
+    },
+    {
+      "area": "Default",
+      "count": 225,
+      "percentage": 15.0
+    },
+    {
+      "area": "Big Box B Site",
+      "count": 150,
+      "percentage": 10.0
+    },
+    {
+      "area": "Back Plat",
+      "count": 150,
+      "percentage": 10.0
+    },
+    {
+      "area": "Doors",
+      "count": 75,
+      "percentage": 5.0
+    },
+    {
+      "area": "Tunnel Exit",
+      "count": 75,
+      "percentage": 5.0
+    },
+    {
+      "area": "Double Barrels",
+      "count": 45,
+      "percentage": 3.0
+    },
+    {
+      "area": "Single Barrel",
+      "count": 30,
+      "percentage": 2.0
+    }
+  ],
+  "utility": {
+    "Car B-Site": {
+      "Molotov": 12,
+      "Smoke Grenade": 8,
+      "Flashbang": 25,
+      "HE Grenade": 10
+    },
+    "Window": {
+      "Molotov": 5,
+      "Smoke Grenade": 15,
+      "Flashbang": 10
+    },
+    "Default": {
+      "Flashbang": 20,
+      "HE Grenade": 15
+    },
+    "Back Plat": {
+      "Smoke Grenade": 5,
+      "Flashbang": 5
+    }
+  }
+}

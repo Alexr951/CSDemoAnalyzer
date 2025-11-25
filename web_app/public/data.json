@@ -1,71 +1,3641 @@
 {
-  "total_b_site_samples": 1500,
-  "positions": [
+  "metadata": {
+    "demo_file": "g2-vs-spirit-m3-dust2.dem",
+    "total_rounds": 20,
+    "map": "de_dust2"
+  },
+  "rounds": [
     {
-      "area": "Car B-Site",
-      "count": 450,
-      "percentage": 30.0
+      "round_num": 1,
+      "ct_players": [
+        {
+          "name": "SunPayus",
+          "buy_type": "pistol",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 9.0
+          },
+          "journey": [
+            {
+              "tick": 20367,
+              "time": 318.23,
+              "x": -1055.9,
+              "y": 1335.7,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 20399,
+              "time": 318.73,
+              "x": -1100.0,
+              "y": 1224.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20431,
+              "time": 319.23,
+              "x": -1172.9,
+              "y": 1131.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20463,
+              "time": 319.73,
+              "x": -1291.4,
+              "y": 1109.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20495,
+              "time": 320.23,
+              "x": -1411.6,
+              "y": 1096.7,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 20527,
+              "time": 320.73,
+              "x": -1532.7,
+              "y": 1079.2,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 20559,
+              "time": 321.23,
+              "x": -1621.2,
+              "y": 1012.1,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 20591,
+              "time": 321.73,
+              "x": -1657.5,
+              "y": 894.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20623,
+              "time": 322.23,
+              "x": -1674.4,
+              "y": 770.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20655,
+              "time": 322.73,
+              "x": -1690.1,
+              "y": 646.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20687,
+              "time": 323.23,
+              "x": -1705.7,
+              "y": 522.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 20719,
+              "time": 323.73,
+              "x": -1721.3,
+              "y": 398.5,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 20751,
+              "time": 324.23,
+              "x": -1736.9,
+              "y": 274.5,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 20783,
+              "time": 324.73,
+              "x": -1752.5,
+              "y": 150.4,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 20815,
+              "time": 325.23,
+              "x": -1800.0,
+              "y": 42.7,
+              "area": "Car B-Site",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 7.0
+        }
+      ]
     },
     {
-      "area": "Window",
-      "count": 300,
-      "percentage": 20.0
+      "round_num": 2,
+      "ct_players": []
     },
     {
-      "area": "Default",
-      "count": 225,
-      "percentage": 15.0
+      "round_num": 3,
+      "ct_players": [
+        {
+          "name": "MATYS",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 38217,
+              "time": 597.14,
+              "x": -2025.7,
+              "y": 1720.1,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 38249,
+              "time": 597.64,
+              "x": -2023.1,
+              "y": 1658.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38281,
+              "time": 598.14,
+              "x": -2024.5,
+              "y": 1596.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38313,
+              "time": 598.64,
+              "x": -2025.9,
+              "y": 1535.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38345,
+              "time": 599.14,
+              "x": -2025.9,
+              "y": 1481.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38377,
+              "time": 599.64,
+              "x": -2025.9,
+              "y": 1479.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38409,
+              "time": 600.14,
+              "x": -2025.9,
+              "y": 1479.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38441,
+              "time": 600.64,
+              "x": -2025.9,
+              "y": 1479.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38473,
+              "time": 601.14,
+              "x": -2025.9,
+              "y": 1479.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38505,
+              "time": 601.64,
+              "x": -2025.9,
+              "y": 1524.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38537,
+              "time": 602.14,
+              "x": -2025.9,
+              "y": 1578.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38569,
+              "time": 602.64,
+              "x": -2025.9,
+              "y": 1594.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38601,
+              "time": 603.14,
+              "x": -2025.9,
+              "y": 1633.6,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 38633,
+              "time": 603.64,
+              "x": -2025.9,
+              "y": 1691.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40137,
+              "time": 627.14,
+              "x": -1950.0,
+              "y": 1712.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40169,
+              "time": 627.64,
+              "x": -1944.2,
+              "y": 1650.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40201,
+              "time": 628.14,
+              "x": -1942.1,
+              "y": 1588.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40233,
+              "time": 628.64,
+              "x": -1947.7,
+              "y": 1546.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40265,
+              "time": 629.14,
+              "x": -1979.2,
+              "y": 1522.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40297,
+              "time": 629.64,
+              "x": -1993.4,
+              "y": 1499.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40329,
+              "time": 630.14,
+              "x": -2002.2,
+              "y": 1467.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40361,
+              "time": 630.64,
+              "x": -2001.8,
+              "y": 1437.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40393,
+              "time": 631.14,
+              "x": -2002.2,
+              "y": 1432.6,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 40425,
+              "time": 631.64,
+              "x": -2005.7,
+              "y": 1382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40457,
+              "time": 632.14,
+              "x": -1975.4,
+              "y": 1344.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 40489,
+              "time": 632.64,
+              "x": -1917.5,
+              "y": 1345.0,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 40521,
+              "time": 633.14,
+              "x": -1865.2,
+              "y": 1368.4,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 40553,
+              "time": 633.64,
+              "x": -1810.9,
+              "y": 1386.9,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40585,
+              "time": 634.14,
+              "x": -1769.9,
+              "y": 1387.0,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40617,
+              "time": 634.64,
+              "x": -1716.6,
+              "y": 1375.8,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40649,
+              "time": 635.14,
+              "x": -1686.5,
+              "y": 1324.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40681,
+              "time": 635.64,
+              "x": -1684.3,
+              "y": 1290.0,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40713,
+              "time": 636.14,
+              "x": -1678.7,
+              "y": 1243.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40745,
+              "time": 636.64,
+              "x": -1630.4,
+              "y": 1229.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 40777,
+              "time": 637.14,
+              "x": -1569.0,
+              "y": 1232.5,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 40809,
+              "time": 637.64,
+              "x": -1510.0,
+              "y": 1217.9,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 40841,
+              "time": 638.14,
+              "x": -1484.6,
+              "y": 1172.7,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 40873,
+              "time": 638.64,
+              "x": -1460.4,
+              "y": 1140.1,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 40905,
+              "time": 639.14,
+              "x": -1432.9,
+              "y": 1110.5,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 40937,
+              "time": 639.64,
+              "x": -1400.1,
+              "y": 1086.4,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 40969,
+              "time": 640.14,
+              "x": -1362.0,
+              "y": 1072.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41001,
+              "time": 640.64,
+              "x": -1322.8,
+              "y": 1061.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41033,
+              "time": 641.14,
+              "x": -1278.2,
+              "y": 1059.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41065,
+              "time": 641.64,
+              "x": -1219.3,
+              "y": 1049.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41097,
+              "time": 642.14,
+              "x": -1160.5,
+              "y": 1059.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41129,
+              "time": 642.64,
+              "x": -1110.8,
+              "y": 1093.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41161,
+              "time": 643.14,
+              "x": -1072.1,
+              "y": 1140.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41193,
+              "time": 643.64,
+              "x": -1053.7,
+              "y": 1195.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41225,
+              "time": 644.14,
+              "x": -1077.2,
+              "y": 1235.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41257,
+              "time": 644.64,
+              "x": -1094.0,
+              "y": 1254.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41289,
+              "time": 645.14,
+              "x": -1118.8,
+              "y": 1294.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41321,
+              "time": 645.64,
+              "x": -1117.4,
+              "y": 1333.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41353,
+              "time": 646.14,
+              "x": -1085.0,
+              "y": 1295.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41385,
+              "time": 646.64,
+              "x": -1089.5,
+              "y": 1316.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41417,
+              "time": 647.14,
+              "x": -1091.2,
+              "y": 1316.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41449,
+              "time": 647.64,
+              "x": -1092.6,
+              "y": 1323.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41481,
+              "time": 648.14,
+              "x": -1094.6,
+              "y": 1333.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41513,
+              "time": 648.64,
+              "x": -1100.2,
+              "y": 1372.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41545,
+              "time": 649.14,
+              "x": -1096.2,
+              "y": 1335.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41577,
+              "time": 649.64,
+              "x": -1101.5,
+              "y": 1271.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41609,
+              "time": 650.14,
+              "x": -1115.5,
+              "y": 1211.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41641,
+              "time": 650.64,
+              "x": -1085.0,
+              "y": 1252.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41673,
+              "time": 651.14,
+              "x": -1049.9,
+              "y": 1298.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41705,
+              "time": 651.64,
+              "x": -1057.0,
+              "y": 1372.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41737,
+              "time": 652.14,
+              "x": -1055.8,
+              "y": 1383.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 41769,
+              "time": 652.64,
+              "x": -984.9,
+              "y": 1337.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 55.5
+        }
+      ]
     },
     {
-      "area": "Big Box B Site",
-      "count": 150,
-      "percentage": 10.0
+      "round_num": 4,
+      "ct_players": []
     },
     {
-      "area": "Back Plat",
-      "count": 150,
-      "percentage": 10.0
+      "round_num": 5,
+      "ct_players": [
+        {
+          "name": "malbsMd",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 64.0
+          },
+          "journey": [
+            {
+              "tick": 55367,
+              "time": 865.11,
+              "x": -1748.2,
+              "y": -64.8,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 55399,
+              "time": 865.61,
+              "x": -1802.9,
+              "y": 33.0,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 55431,
+              "time": 866.11,
+              "x": -1809.4,
+              "y": 137.9,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 55463,
+              "time": 866.61,
+              "x": -1799.8,
+              "y": 262.5,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 55495,
+              "time": 867.11,
+              "x": -1787.9,
+              "y": 387.0,
+              "area": "Car B-Site",
+              "is_entry": false
+            },
+            {
+              "tick": 55527,
+              "time": 867.61,
+              "x": -1769.4,
+              "y": 468.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55559,
+              "time": 868.11,
+              "x": -1754.0,
+              "y": 528.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55591,
+              "time": 868.61,
+              "x": -1741.4,
+              "y": 585.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55623,
+              "time": 869.11,
+              "x": -1729.7,
+              "y": 641.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55655,
+              "time": 869.61,
+              "x": -1722.9,
+              "y": 679.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55687,
+              "time": 870.11,
+              "x": -1722.9,
+              "y": 679.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55719,
+              "time": 870.61,
+              "x": -1724.4,
+              "y": 680.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55751,
+              "time": 871.11,
+              "x": -1779.8,
+              "y": 678.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55783,
+              "time": 871.61,
+              "x": -1834.9,
+              "y": 667.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55815,
+              "time": 872.11,
+              "x": -1872.0,
+              "y": 625.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55847,
+              "time": 872.61,
+              "x": -1901.0,
+              "y": 576.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55879,
+              "time": 873.11,
+              "x": -1950.4,
+              "y": 542.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55911,
+              "time": 873.61,
+              "x": -2001.8,
+              "y": 518.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55943,
+              "time": 874.11,
+              "x": -2041.4,
+              "y": 476.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 55975,
+              "time": 874.61,
+              "x": -2041.9,
+              "y": 436.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56007,
+              "time": 875.11,
+              "x": -2042.6,
+              "y": 436.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56039,
+              "time": 875.61,
+              "x": -2043.9,
+              "y": 429.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56071,
+              "time": 876.11,
+              "x": -2040.0,
+              "y": 415.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56103,
+              "time": 876.61,
+              "x": -2043.9,
+              "y": 382.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56135,
+              "time": 877.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56167,
+              "time": 877.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56199,
+              "time": 878.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56231,
+              "time": 878.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56263,
+              "time": 879.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56295,
+              "time": 879.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56327,
+              "time": 880.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56359,
+              "time": 880.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56391,
+              "time": 881.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56423,
+              "time": 881.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56455,
+              "time": 882.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56487,
+              "time": 882.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56519,
+              "time": 883.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56551,
+              "time": 883.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56583,
+              "time": 884.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56615,
+              "time": 884.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56647,
+              "time": 885.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56679,
+              "time": 885.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56711,
+              "time": 886.11,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56743,
+              "time": 886.61,
+              "x": -2043.9,
+              "y": 382.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56775,
+              "time": 887.11,
+              "x": -2044.0,
+              "y": 379.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56807,
+              "time": 887.61,
+              "x": -2043.9,
+              "y": 377.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56839,
+              "time": 888.11,
+              "x": -2036.1,
+              "y": 382.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56871,
+              "time": 888.61,
+              "x": -2017.8,
+              "y": 396.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56903,
+              "time": 889.11,
+              "x": -1989.7,
+              "y": 417.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56935,
+              "time": 889.61,
+              "x": -1959.2,
+              "y": 441.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56967,
+              "time": 890.11,
+              "x": -1934.6,
+              "y": 459.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 56999,
+              "time": 890.61,
+              "x": -1909.2,
+              "y": 479.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57031,
+              "time": 891.11,
+              "x": -1901.7,
+              "y": 484.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57063,
+              "time": 891.61,
+              "x": -1909.0,
+              "y": 479.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57095,
+              "time": 892.11,
+              "x": -1926.8,
+              "y": 465.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57127,
+              "time": 892.61,
+              "x": -1934.8,
+              "y": 459.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57159,
+              "time": 893.11,
+              "x": -1923.7,
+              "y": 468.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57191,
+              "time": 893.61,
+              "x": -1928.1,
+              "y": 463.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57223,
+              "time": 894.11,
+              "x": -1939.5,
+              "y": 451.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57255,
+              "time": 894.61,
+              "x": -1951.0,
+              "y": 431.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57287,
+              "time": 895.11,
+              "x": -1949.5,
+              "y": 431.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57319,
+              "time": 895.61,
+              "x": -1940.2,
+              "y": 441.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57351,
+              "time": 896.11,
+              "x": -1941.7,
+              "y": 440.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57383,
+              "time": 896.61,
+              "x": -1955.1,
+              "y": 428.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57415,
+              "time": 897.11,
+              "x": -1978.2,
+              "y": 408.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57447,
+              "time": 897.61,
+              "x": -2007.0,
+              "y": 383.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57479,
+              "time": 898.11,
+              "x": -2007.4,
+              "y": 383.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57511,
+              "time": 898.61,
+              "x": -1993.8,
+              "y": 394.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57543,
+              "time": 899.11,
+              "x": -1970.5,
+              "y": 415.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57575,
+              "time": 899.61,
+              "x": -1965.0,
+              "y": 422.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57607,
+              "time": 900.11,
+              "x": -1964.9,
+              "y": 422.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57639,
+              "time": 900.61,
+              "x": -1967.6,
+              "y": 424.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57671,
+              "time": 901.11,
+              "x": -1967.7,
+              "y": 424.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57703,
+              "time": 901.61,
+              "x": -1966.1,
+              "y": 422.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57735,
+              "time": 902.11,
+              "x": -1962.7,
+              "y": 418.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57767,
+              "time": 902.61,
+              "x": -1961.8,
+              "y": 417.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57799,
+              "time": 903.11,
+              "x": -1956.6,
+              "y": 411.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57831,
+              "time": 903.61,
+              "x": -1955.3,
+              "y": 410.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57863,
+              "time": 904.11,
+              "x": -1955.1,
+              "y": 410.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57895,
+              "time": 904.61,
+              "x": -1955.8,
+              "y": 410.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 57927,
+              "time": 905.11,
+              "x": -1953.9,
+              "y": 408.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 40.0
+        }
+      ]
     },
     {
-      "area": "Doors",
-      "count": 75,
-      "percentage": 5.0
+      "round_num": 6,
+      "ct_players": [
+        {
+          "name": "MATYS",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 64457,
+              "time": 1007.14,
+              "x": -1036.2,
+              "y": 1349.1,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 64489,
+              "time": 1007.64,
+              "x": -1092.0,
+              "y": 1273.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64521,
+              "time": 1008.14,
+              "x": -1130.7,
+              "y": 1179.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64553,
+              "time": 1008.64,
+              "x": -1210.6,
+              "y": 1107.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64585,
+              "time": 1009.14,
+              "x": -1268.6,
+              "y": 1112.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64617,
+              "time": 1009.64,
+              "x": -1325.3,
+              "y": 1119.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64649,
+              "time": 1010.14,
+              "x": -1382.5,
+              "y": 1124.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 64681,
+              "time": 1010.64,
+              "x": -1440.4,
+              "y": 1124.0,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 64713,
+              "time": 1011.14,
+              "x": -1498.1,
+              "y": 1118.7,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 64745,
+              "time": 1011.64,
+              "x": -1555.9,
+              "y": 1114.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64777,
+              "time": 1012.14,
+              "x": -1613.4,
+              "y": 1109.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64809,
+              "time": 1012.64,
+              "x": -1671.3,
+              "y": 1110.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64841,
+              "time": 1013.14,
+              "x": -1728.5,
+              "y": 1116.4,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64873,
+              "time": 1013.64,
+              "x": -1784.7,
+              "y": 1128.9,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64905,
+              "time": 1014.14,
+              "x": -1819.4,
+              "y": 1127.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 64937,
+              "time": 1014.64,
+              "x": -1875.7,
+              "y": 1136.2,
+              "area": "Double Barrels",
+              "is_entry": false
+            },
+            {
+              "tick": 64969,
+              "time": 1015.14,
+              "x": -1919.3,
+              "y": 1133.4,
+              "area": "Double Barrels",
+              "is_entry": false
+            },
+            {
+              "tick": 65001,
+              "time": 1015.64,
+              "x": -1956.4,
+              "y": 1172.3,
+              "area": "Double Barrels",
+              "is_entry": false
+            },
+            {
+              "tick": 65033,
+              "time": 1016.14,
+              "x": -2005.1,
+              "y": 1190.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 65065,
+              "time": 1016.64,
+              "x": -2048.3,
+              "y": 1224.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 65097,
+              "time": 1017.14,
+              "x": -2043.0,
+              "y": 1251.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 65129,
+              "time": 1017.64,
+              "x": -2021.2,
+              "y": 1294.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 65161,
+              "time": 1018.14,
+              "x": -2026.8,
+              "y": 1352.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 65193,
+              "time": 1018.64,
+              "x": -2021.4,
+              "y": 1409.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65225,
+              "time": 1019.14,
+              "x": -2001.8,
+              "y": 1462.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65257,
+              "time": 1019.64,
+              "x": -1989.8,
+              "y": 1519.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65289,
+              "time": 1020.14,
+              "x": -1992.0,
+              "y": 1577.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65321,
+              "time": 1020.64,
+              "x": -1998.7,
+              "y": 1603.6,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65353,
+              "time": 1021.14,
+              "x": -2004.3,
+              "y": 1606.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65385,
+              "time": 1021.64,
+              "x": -2002.6,
+              "y": 1613.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65417,
+              "time": 1022.14,
+              "x": -1994.8,
+              "y": 1704.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65449,
+              "time": 1022.64,
+              "x": -1979.0,
+              "y": 1700.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65481,
+              "time": 1023.14,
+              "x": -2000.6,
+              "y": 1585.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65513,
+              "time": 1023.64,
+              "x": -2021.4,
+              "y": 1606.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 65545,
+              "time": 1024.14,
+              "x": -1989.5,
+              "y": 1721.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66569,
+              "time": 1040.14,
+              "x": -1977.0,
+              "y": 1698.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 66601,
+              "time": 1040.64,
+              "x": -1970.5,
+              "y": 1576.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 66633,
+              "time": 1041.14,
+              "x": -1966.4,
+              "y": 1453.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 66665,
+              "time": 1041.64,
+              "x": -1931.5,
+              "y": 1347.6,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 66697,
+              "time": 1042.14,
+              "x": -1839.2,
+              "y": 1262.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66729,
+              "time": 1042.64,
+              "x": -1763.2,
+              "y": 1161.0,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 66761,
+              "time": 1043.14,
+              "x": -1692.9,
+              "y": 1090.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 66793,
+              "time": 1043.64,
+              "x": -1674.3,
+              "y": 977.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 66825,
+              "time": 1044.14,
+              "x": -1670.8,
+              "y": 852.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66857,
+              "time": 1044.64,
+              "x": -1683.5,
+              "y": 735.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66889,
+              "time": 1045.14,
+              "x": -1728.9,
+              "y": 628.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66921,
+              "time": 1045.64,
+              "x": -1786.9,
+              "y": 529.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66953,
+              "time": 1046.14,
+              "x": -1798.8,
+              "y": 425.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 66985,
+              "time": 1046.64,
+              "x": -1825.0,
+              "y": 332.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 67017,
+              "time": 1047.14,
+              "x": -1865.6,
+              "y": 226.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 40.0
+        },
+        {
+          "name": "HeavyGod",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 62473,
+              "time": 976.14,
+              "x": -1944.4,
+              "y": 1718.4,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 62505,
+              "time": 976.64,
+              "x": -1942.1,
+              "y": 1660.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62537,
+              "time": 977.14,
+              "x": -1942.0,
+              "y": 1601.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62569,
+              "time": 977.64,
+              "x": -1943.9,
+              "y": 1543.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62601,
+              "time": 978.14,
+              "x": -1962.9,
+              "y": 1512.5,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 62633,
+              "time": 978.64,
+              "x": -1972.5,
+              "y": 1493.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 62665,
+              "time": 979.14,
+              "x": -1943.5,
+              "y": 1447.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62697,
+              "time": 979.64,
+              "x": -1948.4,
+              "y": 1430.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62729,
+              "time": 980.14,
+              "x": -1970.0,
+              "y": 1373.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62761,
+              "time": 980.64,
+              "x": -1984.4,
+              "y": 1337.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62793,
+              "time": 981.14,
+              "x": -1984.4,
+              "y": 1329.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62825,
+              "time": 981.64,
+              "x": -1984.8,
+              "y": 1322.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 62857,
+              "time": 982.14,
+              "x": -1973.9,
+              "y": 1424.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 62889,
+              "time": 982.64,
+              "x": -1973.7,
+              "y": 1530.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 62921,
+              "time": 983.14,
+              "x": -1968.8,
+              "y": 1634.0,
+              "area": "Back Plat",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 7.0
+        }
+      ]
     },
     {
-      "area": "Tunnel Exit",
-      "count": 75,
-      "percentage": 5.0
+      "round_num": 7,
+      "ct_players": [
+        {
+          "name": "MATYS",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 71930,
+              "time": 1123.91,
+              "x": -1942.2,
+              "y": 1730.4,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 71962,
+              "time": 1124.41,
+              "x": -1942.1,
+              "y": 1674.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 71994,
+              "time": 1124.91,
+              "x": -1942.1,
+              "y": 1619.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72026,
+              "time": 1125.41,
+              "x": -1942.0,
+              "y": 1577.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72058,
+              "time": 1125.91,
+              "x": -1942.0,
+              "y": 1540.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72090,
+              "time": 1126.41,
+              "x": -1942.2,
+              "y": 1491.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72122,
+              "time": 1126.91,
+              "x": -1942.7,
+              "y": 1435.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72154,
+              "time": 1127.41,
+              "x": -1937.6,
+              "y": 1347.9,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 72186,
+              "time": 1127.91,
+              "x": -1886.6,
+              "y": 1253.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72218,
+              "time": 1128.41,
+              "x": -1794.3,
+              "y": 1201.2,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72250,
+              "time": 1128.91,
+              "x": -1672.2,
+              "y": 1175.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72282,
+              "time": 1129.41,
+              "x": -1550.4,
+              "y": 1157.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72314,
+              "time": 1129.91,
+              "x": -1425.7,
+              "y": 1139.4,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 72346,
+              "time": 1130.41,
+              "x": -1325.5,
+              "y": 1122.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72378,
+              "time": 1130.91,
+              "x": -1218.8,
+              "y": 1112.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72410,
+              "time": 1131.41,
+              "x": -1129.5,
+              "y": 1161.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72442,
+              "time": 1131.91,
+              "x": -1097.3,
+              "y": 1256.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72474,
+              "time": 1132.41,
+              "x": -1080.8,
+              "y": 1361.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72506,
+              "time": 1132.91,
+              "x": -1014.0,
+              "y": 1432.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 9.0
+        },
+        {
+          "name": "HeavyGod",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 71866,
+              "time": 1122.91,
+              "x": -2009.6,
+              "y": 1706.8,
+              "area": "Back Plat",
+              "is_entry": true
+            },
+            {
+              "tick": 71898,
+              "time": 1123.41,
+              "x": -1993.9,
+              "y": 1652.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 71930,
+              "time": 1123.91,
+              "x": -2007.1,
+              "y": 1609.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 71962,
+              "time": 1124.41,
+              "x": -1996.9,
+              "y": 1573.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 71994,
+              "time": 1124.91,
+              "x": -1980.2,
+              "y": 1538.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 72026,
+              "time": 1125.41,
+              "x": -1994.1,
+              "y": 1527.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 72058,
+              "time": 1125.91,
+              "x": -1997.2,
+              "y": 1522.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 72090,
+              "time": 1126.41,
+              "x": -2025.6,
+              "y": 1481.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 72122,
+              "time": 1126.91,
+              "x": -2025.9,
+              "y": 1428.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 72154,
+              "time": 1127.41,
+              "x": -2026.7,
+              "y": 1370.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72186,
+              "time": 1127.91,
+              "x": -1996.4,
+              "y": 1301.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72218,
+              "time": 1128.41,
+              "x": -1914.9,
+              "y": 1234.4,
+              "area": "Double Barrels",
+              "is_entry": false
+            },
+            {
+              "tick": 72250,
+              "time": 1128.91,
+              "x": -1809.7,
+              "y": 1198.9,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72282,
+              "time": 1129.41,
+              "x": -1698.6,
+              "y": 1197.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72314,
+              "time": 1129.91,
+              "x": -1578.1,
+              "y": 1177.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 72346,
+              "time": 1130.41,
+              "x": -1454.2,
+              "y": 1161.3,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 72378,
+              "time": 1130.91,
+              "x": -1331.4,
+              "y": 1143.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72410,
+              "time": 1131.41,
+              "x": -1216.1,
+              "y": 1108.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72442,
+              "time": 1131.91,
+              "x": -1136.1,
+              "y": 1145.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72474,
+              "time": 1132.41,
+              "x": -1119.3,
+              "y": 1250.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72506,
+              "time": 1132.91,
+              "x": -1122.4,
+              "y": 1358.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72538,
+              "time": 1133.41,
+              "x": -1092.5,
+              "y": 1405.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72570,
+              "time": 1133.91,
+              "x": -1035.1,
+              "y": 1409.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 72602,
+              "time": 1134.41,
+              "x": -963.9,
+              "y": 1401.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 11.5
+        }
+      ]
     },
     {
-      "area": "Double Barrels",
-      "count": 45,
-      "percentage": 3.0
+      "round_num": 8,
+      "ct_players": []
     },
     {
-      "area": "Single Barrel",
-      "count": 30,
-      "percentage": 2.0
+      "round_num": 9,
+      "ct_players": [
+        {
+          "name": "huNter",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 92509,
+              "time": 1445.45,
+              "x": -987.9,
+              "y": 1370.1,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 92541,
+              "time": 1445.95,
+              "x": -1042.3,
+              "y": 1340.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92573,
+              "time": 1446.45,
+              "x": -1072.6,
+              "y": 1280.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92605,
+              "time": 1446.95,
+              "x": -1115.0,
+              "y": 1172.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92637,
+              "time": 1447.45,
+              "x": -1213.2,
+              "y": 1098.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92669,
+              "time": 1447.95,
+              "x": -1332.4,
+              "y": 1078.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92701,
+              "time": 1448.45,
+              "x": -1454.1,
+              "y": 1082.2,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 92733,
+              "time": 1448.95,
+              "x": -1573.9,
+              "y": 1104.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 92765,
+              "time": 1449.45,
+              "x": -1686.8,
+              "y": 1152.1,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 92797,
+              "time": 1449.95,
+              "x": -1786.6,
+              "y": 1227.1,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 92829,
+              "time": 1450.45,
+              "x": -1888.3,
+              "y": 1299.9,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 92861,
+              "time": 1450.95,
+              "x": -1969.7,
+              "y": 1374.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 92893,
+              "time": 1451.45,
+              "x": -2017.5,
+              "y": 1480.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 92925,
+              "time": 1451.95,
+              "x": -2025.9,
+              "y": 1594.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 92957,
+              "time": 1452.45,
+              "x": -2025.9,
+              "y": 1688.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 92989,
+              "time": 1452.95,
+              "x": -2010.7,
+              "y": 1697.4,
+              "area": "Back Plat",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 7.5
+        }
+      ]
+    },
+    {
+      "round_num": 10,
+      "ct_players": []
+    },
+    {
+      "round_num": 11,
+      "ct_players": []
+    },
+    {
+      "round_num": 12,
+      "ct_players": []
+    },
+    {
+      "round_num": 13,
+      "ct_players": [
+        {
+          "name": "sh1ro",
+          "buy_type": "pistol",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 140298,
+              "time": 2192.16,
+              "x": -1665.9,
+              "y": 1683.4,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 140330,
+              "time": 2192.66,
+              "x": -1658.0,
+              "y": 1655.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140362,
+              "time": 2193.16,
+              "x": -1659.0,
+              "y": 1648.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140394,
+              "time": 2193.66,
+              "x": -1667.9,
+              "y": 1653.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140426,
+              "time": 2194.16,
+              "x": -1652.0,
+              "y": 1644.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140458,
+              "time": 2194.66,
+              "x": -1630.2,
+              "y": 1631.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140490,
+              "time": 2195.16,
+              "x": -1647.0,
+              "y": 1640.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140522,
+              "time": 2195.66,
+              "x": -1646.6,
+              "y": 1638.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140554,
+              "time": 2196.16,
+              "x": -1658.6,
+              "y": 1641.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140586,
+              "time": 2196.66,
+              "x": -1639.9,
+              "y": 1640.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140618,
+              "time": 2197.16,
+              "x": -1623.1,
+              "y": 1626.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 140650,
+              "time": 2197.66,
+              "x": -1624.0,
+              "y": 1625.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 5.5
+        },
+        {
+          "name": "zweih",
+          "buy_type": "pistol",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 141514,
+              "time": 2211.16,
+              "x": -970.2,
+              "y": 1480.3,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 141546,
+              "time": 2211.66,
+              "x": -1024.4,
+              "y": 1452.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141578,
+              "time": 2212.16,
+              "x": -1054.3,
+              "y": 1409.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141610,
+              "time": 2212.66,
+              "x": -1090.2,
+              "y": 1359.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141642,
+              "time": 2213.16,
+              "x": -1093.4,
+              "y": 1331.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141674,
+              "time": 2213.66,
+              "x": -1070.1,
+              "y": 1276.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141706,
+              "time": 2214.16,
+              "x": -1082.5,
+              "y": 1218.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141738,
+              "time": 2214.66,
+              "x": -1096.0,
+              "y": 1170.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141770,
+              "time": 2215.16,
+              "x": -1103.2,
+              "y": 1121.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141802,
+              "time": 2215.66,
+              "x": -1126.1,
+              "y": 1082.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141834,
+              "time": 2216.16,
+              "x": -1181.6,
+              "y": 1056.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141866,
+              "time": 2216.66,
+              "x": -1241.8,
+              "y": 1050.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141898,
+              "time": 2217.16,
+              "x": -1299.0,
+              "y": 1069.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141930,
+              "time": 2217.66,
+              "x": -1358.8,
+              "y": 1061.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141962,
+              "time": 2218.16,
+              "x": -1401.2,
+              "y": 1054.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141994,
+              "time": 2218.66,
+              "x": -1457.7,
+              "y": 1057.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142026,
+              "time": 2219.16,
+              "x": -1515.1,
+              "y": 1070.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142058,
+              "time": 2219.66,
+              "x": -1507.6,
+              "y": 1093.4,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 142090,
+              "time": 2220.16,
+              "x": -1568.9,
+              "y": 1071.8,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142122,
+              "time": 2220.66,
+              "x": -1682.5,
+              "y": 1067.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142154,
+              "time": 2221.16,
+              "x": -1713.0,
+              "y": 1066.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142186,
+              "time": 2221.66,
+              "x": -1792.8,
+              "y": 1079.7,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142218,
+              "time": 2222.16,
+              "x": -1863.4,
+              "y": 1075.4,
+              "area": "Big Box B Site",
+              "is_entry": false
+            },
+            {
+              "tick": 142250,
+              "time": 2222.66,
+              "x": -1899.9,
+              "y": 1083.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142282,
+              "time": 2223.16,
+              "x": -1929.4,
+              "y": 1155.4,
+              "area": "Double Barrels",
+              "is_entry": false
+            },
+            {
+              "tick": 142314,
+              "time": 2223.66,
+              "x": -2037.4,
+              "y": 1193.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142346,
+              "time": 2224.16,
+              "x": -2029.9,
+              "y": 1237.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142378,
+              "time": 2224.66,
+              "x": -1988.5,
+              "y": 1325.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142410,
+              "time": 2225.16,
+              "x": -2006.5,
+              "y": 1408.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142442,
+              "time": 2225.66,
+              "x": -2014.3,
+              "y": 1517.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142474,
+              "time": 2226.16,
+              "x": -2005.1,
+              "y": 1602.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142506,
+              "time": 2226.66,
+              "x": -2015.5,
+              "y": 1674.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142538,
+              "time": 2227.16,
+              "x": -2014.3,
+              "y": 1715.8,
+              "area": "Back Plat",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 16.0
+        },
+        {
+          "name": "zont1x",
+          "buy_type": "pistol",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 8.0
+          },
+          "journey": [
+            {
+              "tick": 143242,
+              "time": 2238.16,
+              "x": -1057.0,
+              "y": 1337.6,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 143274,
+              "time": 2238.66,
+              "x": -1106.2,
+              "y": 1226.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 143306,
+              "time": 2239.16,
+              "x": -1125.0,
+              "y": 1145.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 143338,
+              "time": 2239.66,
+              "x": -1102.5,
+              "y": 1238.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 143370,
+              "time": 2240.16,
+              "x": -1068.4,
+              "y": 1352.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 2.0
+        },
+        {
+          "name": "chopper",
+          "buy_type": "pistol",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 141642,
+              "time": 2213.16,
+              "x": -1013.4,
+              "y": 1350.4,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 141674,
+              "time": 2213.66,
+              "x": -1064.4,
+              "y": 1343.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141706,
+              "time": 2214.16,
+              "x": -1072.8,
+              "y": 1284.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141738,
+              "time": 2214.66,
+              "x": -1079.5,
+              "y": 1223.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141770,
+              "time": 2215.16,
+              "x": -1114.6,
+              "y": 1180.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141802,
+              "time": 2215.66,
+              "x": -1133.9,
+              "y": 1158.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141834,
+              "time": 2216.16,
+              "x": -1164.4,
+              "y": 1130.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141866,
+              "time": 2216.66,
+              "x": -1223.7,
+              "y": 1131.1,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141898,
+              "time": 2217.16,
+              "x": -1281.3,
+              "y": 1150.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141930,
+              "time": 2217.66,
+              "x": -1341.0,
+              "y": 1163.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 141962,
+              "time": 2218.16,
+              "x": -1393.7,
+              "y": 1180.3,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 141994,
+              "time": 2218.66,
+              "x": -1449.0,
+              "y": 1203.8,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 142026,
+              "time": 2219.16,
+              "x": -1503.0,
+              "y": 1216.1,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 142058,
+              "time": 2219.66,
+              "x": -1551.3,
+              "y": 1224.4,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 142090,
+              "time": 2220.16,
+              "x": -1605.1,
+              "y": 1244.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142122,
+              "time": 2220.66,
+              "x": -1664.9,
+              "y": 1250.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142154,
+              "time": 2221.16,
+              "x": -1686.3,
+              "y": 1275.8,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142186,
+              "time": 2221.66,
+              "x": -1714.2,
+              "y": 1325.4,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142218,
+              "time": 2222.16,
+              "x": -1766.6,
+              "y": 1357.7,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142250,
+              "time": 2222.66,
+              "x": -1827.3,
+              "y": 1362.7,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142282,
+              "time": 2223.16,
+              "x": -1888.0,
+              "y": 1371.4,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 142314,
+              "time": 2223.66,
+              "x": -1927.6,
+              "y": 1377.4,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 142346,
+              "time": 2224.16,
+              "x": -1955.1,
+              "y": 1398.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142378,
+              "time": 2224.66,
+              "x": -1950.5,
+              "y": 1491.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142410,
+              "time": 2225.16,
+              "x": -1953.8,
+              "y": 1609.5,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142442,
+              "time": 2225.66,
+              "x": -2023.1,
+              "y": 1693.4,
+              "area": "Back Plat",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 12.5
+        }
+      ]
+    },
+    {
+      "round_num": 14,
+      "ct_players": []
+    },
+    {
+      "round_num": 15,
+      "ct_players": [
+        {
+          "name": "zont1x",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 99.0
+          },
+          "journey": [
+            {
+              "tick": 156869,
+              "time": 2451.08,
+              "x": -1942.1,
+              "y": 1692.5,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 156901,
+              "time": 2451.58,
+              "x": -1962.9,
+              "y": 1685.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 156933,
+              "time": 2452.08,
+              "x": -1942.4,
+              "y": 1686.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 156965,
+              "time": 2452.58,
+              "x": -1958.7,
+              "y": 1679.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 156997,
+              "time": 2453.08,
+              "x": -1973.0,
+              "y": 1675.1,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157029,
+              "time": 2453.58,
+              "x": -1942.1,
+              "y": 1686.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157061,
+              "time": 2454.08,
+              "x": -1955.6,
+              "y": 1678.4,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157093,
+              "time": 2454.58,
+              "x": -1978.0,
+              "y": 1671.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157125,
+              "time": 2455.08,
+              "x": -1945.2,
+              "y": 1680.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157157,
+              "time": 2455.58,
+              "x": -1957.9,
+              "y": 1677.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157189,
+              "time": 2456.08,
+              "x": -1980.6,
+              "y": 1669.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157221,
+              "time": 2456.58,
+              "x": -1960.3,
+              "y": 1671.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157253,
+              "time": 2457.08,
+              "x": -1954.6,
+              "y": 1668.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157285,
+              "time": 2457.58,
+              "x": -1959.4,
+              "y": 1637.6,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157317,
+              "time": 2458.08,
+              "x": -1957.5,
+              "y": 1601.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157349,
+              "time": 2458.58,
+              "x": -1971.9,
+              "y": 1576.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157381,
+              "time": 2459.08,
+              "x": -1984.3,
+              "y": 1561.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157413,
+              "time": 2459.58,
+              "x": -2022.3,
+              "y": 1532.7,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157445,
+              "time": 2460.08,
+              "x": -2002.0,
+              "y": 1499.6,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157477,
+              "time": 2460.58,
+              "x": -2007.2,
+              "y": 1475.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157509,
+              "time": 2461.08,
+              "x": -2014.9,
+              "y": 1429.0,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157541,
+              "time": 2461.58,
+              "x": -1994.3,
+              "y": 1388.8,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 157573,
+              "time": 2462.08,
+              "x": -1940.4,
+              "y": 1379.0,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 157605,
+              "time": 2462.58,
+              "x": -1885.3,
+              "y": 1386.7,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 157637,
+              "time": 2463.08,
+              "x": -1829.9,
+              "y": 1385.2,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157669,
+              "time": 2463.58,
+              "x": -1773.2,
+              "y": 1376.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 157701,
+              "time": 2464.08,
+              "x": -1706.1,
+              "y": 1311.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 157733,
+              "time": 2464.58,
+              "x": -1664.4,
+              "y": 1221.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 157765,
+              "time": 2465.08,
+              "x": -1568.0,
+              "y": 1182.9,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 157797,
+              "time": 2465.58,
+              "x": -1468.6,
+              "y": 1147.3,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 157829,
+              "time": 2466.08,
+              "x": -1372.9,
+              "y": 1102.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157861,
+              "time": 2466.58,
+              "x": -1267.6,
+              "y": 1083.0,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157893,
+              "time": 2467.08,
+              "x": -1169.4,
+              "y": 1110.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157925,
+              "time": 2467.58,
+              "x": -1092.3,
+              "y": 1169.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157957,
+              "time": 2468.08,
+              "x": -1072.2,
+              "y": 1264.6,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 157989,
+              "time": 2468.58,
+              "x": -1042.0,
+              "y": 1359.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 158021,
+              "time": 2469.08,
+              "x": -972.5,
+              "y": 1435.8,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "Back Plat",
+          "time_in_site": 18.0
+        }
+      ]
+    },
+    {
+      "round_num": 16,
+      "ct_players": []
+    },
+    {
+      "round_num": 17,
+      "ct_players": [
+        {
+          "name": "zont1x",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 171837,
+              "time": 2684.95,
+              "x": -2010.3,
+              "y": 1680.8,
+              "area": "Back Plat",
+              "is_entry": true
+            },
+            {
+              "tick": 171869,
+              "time": 2685.45,
+              "x": -1986.4,
+              "y": 1558.2,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 171901,
+              "time": 2685.95,
+              "x": -1961.6,
+              "y": 1435.9,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 171933,
+              "time": 2686.45,
+              "x": -1919.3,
+              "y": 1324.8,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 171965,
+              "time": 2686.95,
+              "x": -1828.9,
+              "y": 1237.9,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "Back Plat",
+          "time_in_site": 2.0
+        }
+      ]
+    },
+    {
+      "round_num": 18,
+      "ct_players": []
+    },
+    {
+      "round_num": 19,
+      "ct_players": []
+    },
+    {
+      "round_num": 20,
+      "ct_players": [
+        {
+          "name": "zont1x",
+          "buy_type": "eco",
+          "equipment": {
+            "primary_weapon": "None",
+            "armor_value": 0,
+            "has_helmet": false,
+            "total_value": 0,
+            "health": 100.0
+          },
+          "journey": [
+            {
+              "tick": 193508,
+              "time": 3023.56,
+              "x": -1702.0,
+              "y": 1711.8,
+              "area": "B-Site Area",
+              "is_entry": true
+            },
+            {
+              "tick": 193540,
+              "time": 3024.06,
+              "x": -1685.7,
+              "y": 1714.3,
+              "area": "B-Site Area",
+              "is_entry": false
+            }
+          ],
+          "utility_throws": [],
+          "entry_point": "unknown",
+          "primary_position": "B-Site Area",
+          "time_in_site": 0.5
+        }
+      ]
     }
   ],
-  "utility": {
-    "Car B-Site": {
-      "Molotov": 12,
-      "Smoke Grenade": 8,
-      "Flashbang": 25,
-      "HE Grenade": 10
-    },
-    "Window": {
-      "Molotov": 5,
-      "Smoke Grenade": 15,
-      "Flashbang": 10
-    },
-    "Default": {
-      "Flashbang": 20,
-      "HE Grenade": 15
-    },
-    "Back Plat": {
-      "Smoke Grenade": 5,
-      "Flashbang": 5
-    }
+  "aggregate": {
+    "total_rounds": 20,
+    "position_stats": [
+      {
+        "area": "B-Site Area",
+        "overall_frequency": 0.65,
+        "total_occurrences": 13,
+        "by_buy_type": {
+          "pistol": {
+            "count": 5,
+            "percentage": 0.385
+          },
+          "eco": {
+            "count": 8,
+            "percentage": 0.615
+          }
+        },
+        "entry_points": {
+          "unknown": 13
+        },
+        "unique_players": 9
+      },
+      {
+        "area": "Back Plat",
+        "overall_frequency": 0.1,
+        "total_occurrences": 2,
+        "by_buy_type": {
+          "eco": {
+            "count": 2,
+            "percentage": 1.0
+          }
+        },
+        "entry_points": {
+          "unknown": 2
+        },
+        "unique_players": 1
+      }
+    ]
   }
 }

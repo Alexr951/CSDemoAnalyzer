@@ -27,20 +27,13 @@ export default function LandingPage() {
 
             <div className="flex items-center gap-4 pt-4">
               <Link
-                href="/dashboard"
+                href="/maps"
                 className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-white px-8 font-medium text-black transition-all duration-300 hover:bg-zinc-200 hover:scale-105"
               >
-                <span className="mr-2">Launch Dashboard</span>
+                <span className="mr-2">Launch Analysis</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 transition-opacity group-hover:opacity-10" />
               </Link>
-              <a
-                href="https://github.com/Alexr951/CSDemoAnalyzer"
-                target="_blank"
-                className="inline-flex h-12 items-center justify-center rounded-md border border-zinc-800 bg-black px-8 font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                View on GitHub
-              </a>
             </div>
           </div>
         </div>

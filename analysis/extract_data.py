@@ -3,9 +3,10 @@ CS2 Demo Analysis - Enhanced Data Extraction
 Extracts comprehensive round-by-round data including:
 - All CT players in B-Site (not just one anchor)
 - Player journeys with timestamps
-- Equipment tracking and buy type classification
+- Equipment tracking and buy type classification using actual money and round start equipment
 - Utility usage with throw locations
 - Aggregate statistics with conditional filtering
+- Money tracking from demo data
 """
 
 import os
@@ -18,7 +19,7 @@ import polars as pl
 DEMO_PATH = r"c:\Users\alexr\OneDrive\Documents\GitHub\CSDemoAnalyzer\Notebooks_Demos\demos\g2-vs-spirit-m3-dust2.dem"
 OUTPUT_PATH = r"c:\Users\alexr\OneDrive\Documents\GitHub\CSDemoAnalyzer\web_app\public\data.json"
 
-# B-Site area boundaries
+# B-Site area boundaries (verified for de_dust2)
 B_SITE_BOUNDS = {
     'min_x': -2264,
     'max_x': -963,
@@ -39,6 +40,15 @@ PISTOLS = ['usp_silencer', 'hkp2000', 'glock', 'p250', 'fiveseven', 'tec9', 'cz7
 SMGS = ['mac10', 'mp9', 'mp7', 'ump45', 'p90', 'bizon']
 RIFLES = ['famas', 'm4a1', 'm4a1_silencer', 'ak47', 'aug', 'sg556', 'galilar']
 HEAVY = ['awp', 'ssg08', 'scar20', 'g3sg1', 'nova', 'xm1014', 'mag7', 'sawedoff', 'm249', 'negev']
+
+# Actual CS2 weapon prices
+WEAPON_PRICES = {
+    'ak47': 2700, 'm4a1': 2900, 'm4a1_silencer': 2900, 'famas': 2050, 'aug': 3300, 'sg556': 3000, 'galilar': 1800,
+    'awp': 4750, 'ssg08': 1700, 'scar20': 5000, 'g3sg1': 5000,
+    'mac10': 1050, 'mp9': 1250, 'mp7': 1500, 'ump45': 1200, 'p90': 2350, 'bizon': 1400,
+    'p250': 300, 'fiveseven': 500, 'tec9': 500, 'cz75a': 500, 'deagle': 700, 'revolver': 600,
+    'usp_silencer': 200, 'hkp2000': 200, 'glock': 200, 'elite': 300
+}
 
 def is_in_b_site_area(x, y):
     """Check if coordinates are within the broad B-Site area"""
@@ -113,83 +123,301 @@ def get_weapon_type(weapon_name):
         return 'knife'
     return 'other'
 
-def classify_buy_type(round_num, total_rounds, equipment_value, primary_weapon):
+def get_weapon_price(weapon_name):
+    """Get actual CS2 weapon price"""
+    if not weapon_name or weapon_name == 'None':
+        return 0
+    weapon_name = weapon_name.lower().replace('weapon_', '')
+    return WEAPON_PRICES.get(weapon_name, 0)
+
+def calculate_equipment_value(primary_weapon, armor_value, has_helmet, grenades=None):
+    """Calculate accurate equipment value using real CS2 prices"""
+    value = 0
+    
+    # Primary weapon - only if it's a valid weapon name (not an entity ID)
+    if primary_weapon and primary_weapon != 'None':
+        # Check if it's a numeric ID (entity ID) - if so, we can't price it directly
+        try:
+            weapon_id = float(str(primary_weapon))
+            # If it's a large number, it's an entity ID - estimate based on armor/context
+            if weapon_id > 1000000:
+                # Entity ID - we'll estimate based on other factors
+                # If they have full armor + helmet, likely a full buy
+                if armor_value > 0 and has_helmet:
+                    value += 3000  # Estimate for rifle
+                elif armor_value > 0:
+                    value += 1500  # Estimate for SMG or partial buy
+            else:
+                # Small number might be a weapon enum, try to get price
+                value += get_weapon_price(primary_weapon)
+        except:
+            # Not a number, treat as weapon name
+            value += get_weapon_price(primary_weapon)
+    
+    # Armor
+    if armor_value > 0:
+        value += 650 if has_helmet else 500
+    
+    # Grenades (approximate)
+    if grenades:
+        grenade_prices = {'hegrenade': 300, 'flashbang': 200, 'smokegrenade': 300, 'incgrenade': 600, 'molotov': 400}
+        for nade in grenades:
+            nade_name = nade.lower().replace('weapon_', '')
+            value += grenade_prices.get(nade_name, 200)
+    
+    return value
+
+def classify_buy_type(round_num, total_rounds, equipment_value, primary_weapon, money_at_start=None, armor_value=0, has_helmet=False):
     """
-    Classify round buy type based on round number and equipment
-    - Pistol: First round of each half (round 1 and round 13)
-    - Eco: Equipment value < 2000 or pistol only
-    - Light Buy: SMG with value < 3500
-    - Full Buy: Value >= 3500 or rifle/AWP
+    Classify round buy type based on round number, equipment, and money
+    - Pistol: First round of each half (round 1 and round 16 for MR12, or round 1 and round 13 for MR15)
+    - Eco: Equipment value < 2000 or pistol only, and money < 3000
+    - Light Buy: SMG with value < 3500, money between 3000-5000
+    - Full Buy: Value >= 3500 or rifle/AWP, money >= 5000
     """
+    # Determine half break (round 16 for MR12, round 13 for MR15)
+    half_break = 16 if total_rounds <= 24 else 13
+    
     # Pistol rounds (first round of each half)
-    if round_num == 1 or round_num == 13:
+    if round_num == 1 or round_num == half_break:
         return 'pistol'
     
     weapon_type = get_weapon_type(primary_weapon)
     
-    # Eco rounds
-    if equipment_value < BUY_THRESHOLDS['eco'] or weapon_type == 'pistol':
-        return 'eco'
+    # If weapon is an entity ID (numeric), use armor and equipment value to classify
+    is_entity_id = False
+    if primary_weapon and primary_weapon != 'None':
+        try:
+            weapon_id = float(str(primary_weapon))
+            if weapon_id > 1000000:
+                is_entity_id = True
+        except:
+            pass
     
-    # Light buy (SMG rounds)
-    if weapon_type == 'smg' and equipment_value < BUY_THRESHOLDS['light_buy']:
+    # Use money if available for better classification
+    if money_at_start is not None:
+        # Full buy: high equipment value and enough money
+        if equipment_value >= BUY_THRESHOLDS['full_buy'] and money_at_start >= 5000:
+            return 'full_buy'
+        # Full buy: has rifle/heavy and enough money
+        if weapon_type in ['rifle', 'heavy'] and money_at_start >= 5000:
+            return 'full_buy'
+        # Full buy: full armor + helmet + high money suggests full buy
+        if armor_value > 0 and has_helmet and equipment_value >= 2000 and money_at_start >= 4000:
+            return 'full_buy'
+        # Light buy: SMG with moderate money
+        if weapon_type == 'smg' and 3000 <= money_at_start < 5000:
+            return 'light_buy'
+        # Light buy: partial armor or moderate equipment
+        if 2000 <= equipment_value < BUY_THRESHOLDS['full_buy'] and 2000 <= money_at_start < 5000:
+            return 'light_buy'
+        # Eco: low money or pistol only
+        if money_at_start < 3000 or weapon_type == 'pistol' or equipment_value < BUY_THRESHOLDS['eco']:
+            return 'eco'
+        # Default based on equipment
+        if equipment_value >= BUY_THRESHOLDS['full_buy']:
+            return 'full_buy'
         return 'light_buy'
-    
-    # Full buy
-    if equipment_value >= BUY_THRESHOLDS['full_buy'] or weapon_type in ['rifle', 'heavy']:
-        return 'full_buy'
-    
-    # Default to eco if we can't determine
-    return 'eco'
+    else:
+        # Fallback to equipment-based classification
+        # Full armor + helmet usually indicates full buy
+        if armor_value > 0 and has_helmet and equipment_value >= 2000:
+            if equipment_value >= BUY_THRESHOLDS['full_buy']:
+                return 'full_buy'
+            else:
+                return 'light_buy'
+        
+        # Classification based on equipment value
+        if equipment_value < BUY_THRESHOLDS['eco'] or weapon_type == 'pistol':
+            return 'eco'
+        if weapon_type == 'smg' and equipment_value < BUY_THRESHOLDS['light_buy']:
+            return 'light_buy'
+        if equipment_value >= BUY_THRESHOLDS['full_buy'] or weapon_type in ['rifle', 'heavy']:
+            return 'full_buy'
+        # If we have armor but low equipment value, might be light buy
+        if armor_value > 0 and 1000 <= equipment_value < BUY_THRESHOLDS['full_buy']:
+            return 'light_buy'
+        return 'eco'
 
-def extract_player_equipment(ticks_df, round_num, player_name, tick):
-    """Extract equipment information for a player at a specific tick"""
-    player_tick = ticks_df.filter(
-        (pl.col('round_num') == round_num) &
-        (pl.col('name') == player_name) &
-        (pl.col('tick') == tick)
-    )
+def extract_player_equipment_at_round_start(ticks_df, round_num, player_name, rounds_df=None, buys_df=None, economy_df=None):
+    """Extract equipment information for a player at round start (first few seconds)"""
+    # Try to get round start tick from rounds dataframe if available
+    round_start_tick = None
+    if rounds_df is not None and len(rounds_df) > 0:
+        round_data = rounds_df.filter(pl.col('round_num') == round_num)
+        if len(round_data) > 0:
+            round_row = round_data.row(0, named=True)
+            # Try different column names for round start tick
+            round_start_tick = round_row.get('freeze_end', round_row.get('start', round_row.get('start_tick', None)))
     
-    if len(player_tick) == 0:
+    # Try to get weapon and money from buys dataframe first (most accurate)
+    weapon_from_buys = None
+    money_from_buys = None
+    if buys_df is not None and len(buys_df) > 0:
+        player_buys = buys_df.filter(
+            (pl.col('round_num') == round_num) &
+            (pl.col('player_name') == player_name)
+        )
+        if len(player_buys) > 0:
+            # Get all buys for this player in this round
+            for buy_row in player_buys.iter_rows(named=True):
+                # Get weapon from buy - try multiple column names
+                weapon = None
+                for col in ['weapon', 'item', 'weapon_name', 'item_name', 'equipment']:
+                    if col in buy_row:
+                        val = buy_row[col]
+                        if val and val != 'None' and str(val).lower() != 'none':
+                            weapon = str(val)
+                            break
+                
+                if weapon:
+                    # Prefer primary weapons over pistols/utilities
+                    weapon_type = get_weapon_type(weapon)
+                    if weapon_type in ['rifle', 'heavy', 'smg']:
+                        weapon_from_buys = weapon
+                        break
+                    elif weapon_from_buys is None:  # Fallback to any weapon
+                        weapon_from_buys = weapon
+                
+                # Get money before buy (if available)
+                if money_from_buys is None:
+                    for money_col in ['money_before', 'cash', 'money', 'total_money', 'cash_before']:
+                        if money_col in buy_row:
+                            money_from_buys = buy_row[money_col]
+                            if money_from_buys is not None:
+                                break
+    
+    # Try economy dataframe
+    money_from_economy = None
+    if economy_df is not None and len(economy_df) > 0:
+        player_economy = economy_df.filter(
+            (pl.col('round_num') == round_num) &
+            (pl.col('player_name') == player_name)
+        )
+        if len(player_economy) > 0:
+            econ_row = player_economy.row(0, named=True)
+            money_from_economy = econ_row.get('cash', econ_row.get('money', econ_row.get('total_money', None)))
+    
+    # Get round ticks for this player
+    round_ticks = ticks_df.filter(
+        (pl.col('round_num') == round_num) &
+        (pl.col('name') == player_name)
+    ).sort('tick')
+    
+    if len(round_ticks) == 0:
         return None
     
-    row = player_tick.row(0, named=True)
+    # If we have round start tick, use ticks after that (within first 5 seconds)
+    if round_start_tick:
+        # Get ticks within first 5 seconds of round start (~320 ticks at 64 tickrate)
+        start_window = round_ticks.filter(
+            (pl.col('tick') >= round_start_tick) &
+            (pl.col('tick') <= round_start_tick + 320)
+        )
+        if len(start_window) > 0:
+            round_ticks = start_window
     
-    # Get weapons
-    primary = row.get('active_weapon', 'None')
+    # Get first tick where player is alive (round start)
+    first_alive_tick = round_ticks.filter(pl.col('health') > 0)
+    if len(first_alive_tick) == 0:
+        # If no alive ticks, use first tick anyway
+        first_alive_tick = round_ticks.head(1)
     
-    # Calculate equipment value (simplified - you may want to add proper weapon values)
-    armor_value = row.get('armor_value', 0)
-    has_helmet = row.get('has_helmet', False)
+    if len(first_alive_tick) == 0:
+        return None
     
-    # Simplified equipment value calculation
-    equipment_value = 0
-    weapon_type = get_weapon_type(primary)
+    row = first_alive_tick.row(0, named=True)
     
-    if weapon_type == 'rifle':
-        equipment_value += 3000
-    elif weapon_type == 'heavy':
-        equipment_value += 4000
-    elif weapon_type == 'smg':
-        equipment_value += 1500
-    elif weapon_type == 'pistol':
-        equipment_value += 500
+    # Get weapons - prefer buys dataframe, then try ticks
+    primary = weapon_from_buys  # Use weapon from buys if available
     
-    if armor_value > 0:
-        equipment_value += 650 if has_helmet else 500
+    if not primary or primary == 'None':
+        # Try to get from ticks dataframe
+        # Note: active_weapon might be an entity ID (numeric), not a name
+        weapon_cols = ['active_weapon', 'weapon', 'weapon_name', 'weapon_primary', 'primary_weapon', 'current_weapon']
+        for col in weapon_cols:
+            if col in row:
+                val = row[col]
+                if val and val != 'None':
+                    val_str = str(val)
+                    # Check if it's a numeric ID (entity ID) - these are usually large numbers
+                    # Weapon names are strings, IDs are numbers
+                    try:
+                        val_float = float(val_str)
+                        # If it's a very large number, it's likely an entity ID, skip it
+                        if val_float > 1000000:
+                            continue
+                    except:
+                        pass
+                    
+                    if val_str.lower() != 'none':
+                        primary = val_str
+                        break
+        
+        # If still no weapon, check if there's inventory data
+        if not primary or primary == 'None':
+            # Check for inventory columns
+            for col in row.keys():
+                if 'weapon' in col.lower():
+                    val = row[col]
+                    if val and str(val).lower() != 'none':
+                        try:
+                            # Skip if it's a large numeric ID
+                            val_float = float(str(val))
+                            if val_float > 1000000:
+                                continue
+                        except:
+                            pass
+                        primary = str(val)
+                        break
+    
+    if not primary:
+        primary = 'None'
+    
+    # Get armor - try multiple column names
+    # awpy uses 'armor' column which contains armor value (0-100)
+    armor_value = row.get('armor', row.get('armor_value', 0))
+    if armor_value is None:
+        armor_value = 0
+    armor_value = int(armor_value) if armor_value else 0
+    
+    # Get helmet status - in CS2, armor > 100 means helmet, or check has_helmet column
+    has_helmet = False
+    if 'has_helmet' in row:
+        has_helmet = bool(row['has_helmet'])
+    elif 'helmet' in row:
+        has_helmet = bool(row['helmet'])
+    # In CS2, armor value > 100 typically indicates helmet (100 = kevlar, >100 = kevlar+helmet)
+    elif armor_value > 100:
+        has_helmet = True
+        armor_value = 100  # Normalize to 100 for kevlar+helmet
+    elif armor_value == 100:
+        # Could be either, but if it's exactly 100, assume no helmet for safety
+        has_helmet = False
+    
+    # Get money if available - try multiple sources
+    money = money_from_buys or money_from_economy  # From buys/economy dataframe first
+    if money is None:
+        # Try from ticks
+        money = row.get('cash', row.get('money', row.get('total_money', None)))
+    
+    # Calculate accurate equipment value
+    equipment_value = calculate_equipment_value(primary, armor_value, has_helmet)
     
     return {
-        'primary_weapon': primary,
+        'primary_weapon': primary if primary else 'None',
         'armor_value': armor_value,
-        'has_helmet': has_helmet,
+        'has_helmet': bool(has_helmet),
         'equipment_value': equipment_value,
-        'health': row.get('health', 100)
+        'health': row.get('health', 100),
+        'money': money
     }
 
 def analyze_player_journey(ticks_df, round_num, player_name, sample_rate=32):
     """
     Analyze a player's journey through B-Site for a specific round
     Returns journey points with timestamps and areas
+    Uses proper awpy coordinate system (X, Y, Z)
     """
     # Get all ticks for this player in this round where they're alive
     player_round_ticks = ticks_df.filter(
@@ -215,7 +443,15 @@ def analyze_player_journey(ticks_df, round_num, player_name, sample_rate=32):
             continue
             
         row = tick_data.row(0, named=True)
-        x, y = row['X'], row['Y']
+        
+        # Get coordinates - awpy uses X, Y, Z
+        x = row.get('X', row.get('x', 0))
+        y = row.get('Y', row.get('y', 0))
+        z = row.get('Z', row.get('z', 0))
+        
+        # Validate coordinates are reasonable (not 0,0,0 or NaN)
+        if x == 0 and y == 0 and z == 0:
+            continue
         
         # Check if in B-Site area
         if is_in_b_site_area(x, y):
@@ -224,11 +460,15 @@ def analyze_player_journey(ticks_df, round_num, player_name, sample_rate=32):
                 in_b_site = True
             
             area = classify_b_site_position(x, y)
+            
+            # Calculate time from round start (need round start tick)
+            # For now, use absolute time
             journey.append({
-                'tick': tick,
-                'time': round(tick / 64.0, 2),  # Convert to seconds
-                'x': round(x, 1),
-                'y': round(y, 1),
+                'tick': int(tick),
+                'time': round(tick / 64.0, 2),  # Convert to seconds (assuming 64 tick)
+                'x': round(float(x), 1),
+                'y': round(float(y), 1),
+                'z': round(float(z), 1),
                 'area': area,
                 'is_entry': (tick == first_b_site_tick)
             })
@@ -278,7 +518,9 @@ def main():
     print(f"Loading demo from: {DEMO_PATH}")
     try:
         dem = Demo(DEMO_PATH)
-        dem.parse()
+        # Parse with player props including weapons and money
+        # awpy requires explicit player_props to track equipment and money
+        dem.parse(player_props=["health", "armor_value", "pitch", "yaw", "cash", "money", "total_money", "active_weapon", "weapon"])
     except Exception as e:
         print(f"Error loading demo: {e}")
         return
@@ -289,8 +531,42 @@ def main():
     total_rounds = ticks_df['round_num'].max()
     print(f"Total rounds in demo: {total_rounds}")
     
-    # Debug: Print columns and sides
-    print(f"Available columns: {ticks_df.columns}")
+    # Debug: Print columns to understand available data
+    print(f"Available columns in ticks: {ticks_df.columns}")
+    
+    # Check for money/cash columns in ticks
+    money_columns = [col for col in ticks_df.columns if 'money' in col.lower() or 'cash' in col.lower()]
+    if money_columns:
+        print(f"Money columns found in ticks: {money_columns}")
+    else:
+        print("Warning: No money columns found in ticks")
+    
+    # Check rounds dataframe for economy data
+    rounds_df = None
+    if hasattr(dem, 'rounds') and dem.rounds is not None:
+        rounds_df = dem.rounds
+        print(f"Rounds dataframe columns: {rounds_df.columns}")
+    
+    # Check buys dataframe for economy data (this is where money is often stored)
+    buys_df = None
+    if hasattr(dem, 'buys') and dem.buys is not None:
+        buys_df = dem.buys
+        print(f"Buys dataframe columns: {buys_df.columns}")
+        if len(buys_df) > 0:
+            print(f"Buys dataframe has {len(buys_df)} rows")
+    else:
+        print("No buys dataframe found")
+    
+    # Check if there's an economy dataframe
+    economy_df = None
+    if hasattr(dem, 'economy') and dem.economy is not None:
+        economy_df = dem.economy
+        print(f"Economy dataframe columns: {economy_df.columns}")
+        if len(economy_df) > 0:
+            print(f"Economy dataframe has {len(economy_df)} rows")
+    else:
+        print("No economy dataframe found")
+    
     if "side" in ticks_df.columns:
         print(f"Unique sides: {ticks_df['side'].unique().to_list()}")
     if "team_num" in ticks_df.columns:
@@ -365,30 +641,23 @@ def main():
         
         # Analyze each CT player who was in B-Site
         for player_name in b_site_players:
-            # Get a representative tick for equipment (use first tick in B-Site)
-            player_b_ticks = round_ticks.filter(pl.col('name') == player_name)
-            first_tick = None
-            
-            for row in player_b_ticks.iter_rows(named=True):
-                x, y = row['X'], row['Y']
-                if is_in_b_site_area(x, y):
-                    first_tick = row['tick']
-                    break
-            
-            if first_tick is None:
-                continue
-            
-            # Extract equipment
-            equipment = extract_player_equipment(ticks_df, round_num, player_name, first_tick)
+            # Extract equipment at round start (not when entering B-site)
+            equipment = extract_player_equipment_at_round_start(ticks_df, round_num, player_name, rounds_df, buys_df, economy_df)
             if equipment is None:
                 continue
             
-            # Classify buy type
+            # Get money at round start for better buy classification
+            money_at_start = equipment.get('money')
+            
+            # Classify buy type using equipment and money
             buy_type = classify_buy_type(
                 round_num, 
                 total_rounds, 
                 equipment['equipment_value'],
-                equipment['primary_weapon']
+                equipment['primary_weapon'],
+                money_at_start,
+                equipment['armor_value'],
+                equipment['has_helmet']
             )
             
             # Analyze journey
@@ -425,7 +694,8 @@ def main():
                     'armor_value': equipment['armor_value'],
                     'has_helmet': equipment['has_helmet'],
                     'total_value': equipment['equipment_value'],
-                    'health': equipment['health']
+                    'health': equipment['health'],
+                    'money': money_at_start  # Include money if available
                 },
                 'journey': journey,
                 'utility_throws': grenades,

@@ -13,10 +13,11 @@
           "buy_type": "pistol",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 9.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -24,6 +25,7 @@
               "time": 318.23,
               "x": -1055.9,
               "y": 1335.7,
+              "z": -111.4,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -32,6 +34,7 @@
               "time": 318.73,
               "x": -1100.0,
               "y": 1224.0,
+              "z": -83.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -40,6 +43,7 @@
               "time": 319.23,
               "x": -1172.9,
               "y": 1131.6,
+              "z": -8.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -48,6 +52,7 @@
               "time": 319.73,
               "x": -1291.4,
               "y": 1109.1,
+              "z": 66.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -56,6 +61,7 @@
               "time": 320.23,
               "x": -1411.6,
               "y": 1096.7,
+              "z": 36.5,
               "area": "Window",
               "is_entry": false
             },
@@ -64,6 +70,7 @@
               "time": 320.73,
               "x": -1532.7,
               "y": 1079.2,
+              "z": 36.0,
               "area": "Window",
               "is_entry": false
             },
@@ -72,6 +79,7 @@
               "time": 321.23,
               "x": -1621.2,
               "y": 1012.1,
+              "z": 32.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -80,6 +88,7 @@
               "time": 321.73,
               "x": -1657.5,
               "y": 894.4,
+              "z": 31.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -88,6 +97,7 @@
               "time": 322.23,
               "x": -1674.4,
               "y": 770.6,
+              "z": 30.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -96,6 +106,7 @@
               "time": 322.73,
               "x": -1690.1,
               "y": 646.5,
+              "z": 32.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -104,6 +115,7 @@
               "time": 323.23,
               "x": -1705.7,
               "y": 522.5,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -112,6 +124,7 @@
               "time": 323.73,
               "x": -1721.3,
               "y": 398.5,
+              "z": 1.1,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -120,6 +133,7 @@
               "time": 324.23,
               "x": -1736.9,
               "y": 274.5,
+              "z": -1.3,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -128,6 +142,7 @@
               "time": 324.73,
               "x": -1752.5,
               "y": 150.4,
+              "z": -0.1,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -136,6 +151,7 @@
               "time": 325.23,
               "x": -1800.0,
               "y": 42.7,
+              "z": 0.8,
               "area": "Car B-Site",
               "is_entry": false
             }
@@ -162,7 +178,8 @@
             "armor_value": 0,
             "has_helmet": false,
             "total_value": 0,
-            "health": 100.0
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -170,6 +187,7 @@
               "time": 597.14,
               "x": -2025.7,
               "y": 1720.1,
+              "z": 33.0,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -178,6 +196,7 @@
               "time": 597.64,
               "x": -2023.1,
               "y": 1658.4,
+              "z": 32.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -186,6 +205,7 @@
               "time": 598.14,
               "x": -2024.5,
               "y": 1596.9,
+              "z": 32.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -194,6 +214,7 @@
               "time": 598.64,
               "x": -2025.9,
               "y": 1535.1,
+              "z": 33.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -202,6 +223,7 @@
               "time": 599.14,
               "x": -2025.9,
               "y": 1481.1,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -210,6 +232,7 @@
               "time": 599.64,
               "x": -2025.9,
               "y": 1479.2,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -218,6 +241,7 @@
               "time": 600.14,
               "x": -2025.9,
               "y": 1479.2,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -226,6 +250,7 @@
               "time": 600.64,
               "x": -2025.9,
               "y": 1479.2,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -234,6 +259,7 @@
               "time": 601.14,
               "x": -2025.9,
               "y": 1479.4,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -242,6 +268,7 @@
               "time": 601.64,
               "x": -2025.9,
               "y": 1524.9,
+              "z": 33.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -250,6 +277,7 @@
               "time": 602.14,
               "x": -2025.9,
               "y": 1578.7,
+              "z": 33.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -258,6 +286,7 @@
               "time": 602.64,
               "x": -2025.9,
               "y": 1594.0,
+              "z": 32.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -266,6 +295,7 @@
               "time": 603.14,
               "x": -2025.9,
               "y": 1633.6,
+              "z": 32.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -274,6 +304,7 @@
               "time": 603.64,
               "x": -2025.9,
               "y": 1691.8,
+              "z": 33.1,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -282,6 +313,7 @@
               "time": 627.14,
               "x": -1950.0,
               "y": 1712.2,
+              "z": 33.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -290,6 +322,7 @@
               "time": 627.64,
               "x": -1944.2,
               "y": 1650.5,
+              "z": 33.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -298,6 +331,7 @@
               "time": 628.14,
               "x": -1942.1,
               "y": 1588.4,
+              "z": 34.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -306,6 +340,7 @@
               "time": 628.64,
               "x": -1947.7,
               "y": 1546.6,
+              "z": 35.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -314,6 +349,7 @@
               "time": 629.14,
               "x": -1979.2,
               "y": 1522.2,
+              "z": 32.4,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -322,6 +358,7 @@
               "time": 629.64,
               "x": -1993.4,
               "y": 1499.8,
+              "z": 31.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -330,6 +367,7 @@
               "time": 630.14,
               "x": -2002.2,
               "y": 1467.5,
+              "z": 31.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -338,6 +376,7 @@
               "time": 630.64,
               "x": -2001.8,
               "y": 1437.0,
+              "z": 31.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -346,6 +385,7 @@
               "time": 631.14,
               "x": -2002.2,
               "y": 1432.6,
+              "z": 30.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -354,6 +394,7 @@
               "time": 631.64,
               "x": -2005.7,
               "y": 1382.8,
+              "z": 30.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -362,6 +403,7 @@
               "time": 632.14,
               "x": -1975.4,
               "y": 1344.4,
+              "z": 28.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -370,6 +412,7 @@
               "time": 632.64,
               "x": -1917.5,
               "y": 1345.0,
+              "z": 31.9,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -378,6 +421,7 @@
               "time": 633.14,
               "x": -1865.2,
               "y": 1368.4,
+              "z": 37.4,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -386,6 +430,7 @@
               "time": 633.64,
               "x": -1810.9,
               "y": 1386.9,
+              "z": 41.3,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -394,6 +439,7 @@
               "time": 634.14,
               "x": -1769.9,
               "y": 1387.0,
+              "z": 43.5,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -402,6 +448,7 @@
               "time": 634.64,
               "x": -1716.6,
               "y": 1375.8,
+              "z": 43.5,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -410,6 +457,7 @@
               "time": 635.14,
               "x": -1686.5,
               "y": 1324.6,
+              "z": 40.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -418,6 +466,7 @@
               "time": 635.64,
               "x": -1684.3,
               "y": 1290.0,
+              "z": 38.1,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -426,6 +475,7 @@
               "time": 636.14,
               "x": -1678.7,
               "y": 1243.5,
+              "z": 34.0,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -434,6 +484,7 @@
               "time": 636.64,
               "x": -1630.4,
               "y": 1229.5,
+              "z": 33.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -442,6 +493,7 @@
               "time": 637.14,
               "x": -1569.0,
               "y": 1232.5,
+              "z": 37.1,
               "area": "Back site Tucked",
               "is_entry": false
             },
@@ -450,6 +502,7 @@
               "time": 637.64,
               "x": -1510.0,
               "y": 1217.9,
+              "z": 37.1,
               "area": "Back site Tucked",
               "is_entry": false
             },
@@ -458,6 +511,7 @@
               "time": 638.14,
               "x": -1484.6,
               "y": 1172.7,
+              "z": 35.8,
               "area": "Window",
               "is_entry": false
             },
@@ -466,6 +520,7 @@
               "time": 638.64,
               "x": -1460.4,
               "y": 1140.1,
+              "z": 35.2,
               "area": "Window",
               "is_entry": false
             },
@@ -474,6 +529,7 @@
               "time": 639.14,
               "x": -1432.9,
               "y": 1110.5,
+              "z": 35.9,
               "area": "Window",
               "is_entry": false
             },
@@ -482,6 +538,7 @@
               "time": 639.64,
               "x": -1400.1,
               "y": 1086.4,
+              "z": 37.0,
               "area": "Window",
               "is_entry": false
             },
@@ -490,6 +547,7 @@
               "time": 640.14,
               "x": -1362.0,
               "y": 1072.1,
+              "z": 37.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -498,6 +556,7 @@
               "time": 640.64,
               "x": -1322.8,
               "y": 1061.1,
+              "z": 38.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -506,6 +565,7 @@
               "time": 641.14,
               "x": -1278.2,
               "y": 1059.1,
+              "z": 33.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -514,6 +574,7 @@
               "time": 641.64,
               "x": -1219.3,
               "y": 1049.6,
+              "z": 18.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -522,6 +583,7 @@
               "time": 642.14,
               "x": -1160.5,
               "y": 1059.4,
+              "z": -5.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -530,6 +592,7 @@
               "time": 642.64,
               "x": -1110.8,
               "y": 1093.2,
+              "z": -26.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -538,6 +601,7 @@
               "time": 643.14,
               "x": -1072.1,
               "y": 1140.3,
+              "z": -50.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -546,6 +610,7 @@
               "time": 643.64,
               "x": -1053.7,
               "y": 1195.9,
+              "z": -73.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -554,6 +619,7 @@
               "time": 644.14,
               "x": -1077.2,
               "y": 1235.4,
+              "z": -88.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -562,6 +628,7 @@
               "time": 644.64,
               "x": -1094.0,
               "y": 1254.5,
+              "z": -98.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -570,6 +637,7 @@
               "time": 645.14,
               "x": -1118.8,
               "y": 1294.6,
+              "z": -110.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -578,6 +646,7 @@
               "time": 645.64,
               "x": -1117.4,
               "y": 1333.2,
+              "z": -111.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -586,6 +655,7 @@
               "time": 646.14,
               "x": -1085.0,
               "y": 1295.0,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -594,6 +664,7 @@
               "time": 646.64,
               "x": -1089.5,
               "y": 1316.8,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -602,6 +673,7 @@
               "time": 647.14,
               "x": -1091.2,
               "y": 1316.9,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -610,6 +682,7 @@
               "time": 647.64,
               "x": -1092.6,
               "y": 1323.7,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -618,6 +691,7 @@
               "time": 648.14,
               "x": -1094.6,
               "y": 1333.6,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -626,6 +700,7 @@
               "time": 648.64,
               "x": -1100.2,
               "y": 1372.5,
+              "z": -112.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -634,6 +709,7 @@
               "time": 649.14,
               "x": -1096.2,
               "y": 1335.0,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -642,6 +718,7 @@
               "time": 649.64,
               "x": -1101.5,
               "y": 1271.8,
+              "z": -106.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -650,6 +727,7 @@
               "time": 650.14,
               "x": -1115.5,
               "y": 1211.6,
+              "z": -74.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -658,6 +736,7 @@
               "time": 650.64,
               "x": -1085.0,
               "y": 1252.4,
+              "z": -97.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -666,6 +745,7 @@
               "time": 651.14,
               "x": -1049.9,
               "y": 1298.1,
+              "z": -110.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -674,6 +754,7 @@
               "time": 651.64,
               "x": -1057.0,
               "y": 1372.4,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -682,6 +763,7 @@
               "time": 652.14,
               "x": -1055.8,
               "y": 1383.4,
+              "z": -112.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -690,6 +772,7 @@
               "time": 652.64,
               "x": -984.9,
               "y": 1337.9,
+              "z": -108.3,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -712,11 +795,12 @@
           "name": "malbsMd",
           "buy_type": "eco",
           "equipment": {
-            "primary_weapon": "None",
-            "armor_value": 0,
+            "primary_weapon": "360560.0",
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 64.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -724,6 +808,7 @@
               "time": 865.11,
               "x": -1748.2,
               "y": -64.8,
+              "z": 143.5,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -732,6 +817,7 @@
               "time": 865.61,
               "x": -1802.9,
               "y": 33.0,
+              "z": 1.3,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -740,6 +826,7 @@
               "time": 866.11,
               "x": -1809.4,
               "y": 137.9,
+              "z": 1.3,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -748,6 +835,7 @@
               "time": 866.61,
               "x": -1799.8,
               "y": 262.5,
+              "z": -0.2,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -756,6 +844,7 @@
               "time": 867.11,
               "x": -1787.9,
               "y": 387.0,
+              "z": 1.4,
               "area": "Car B-Site",
               "is_entry": false
             },
@@ -764,6 +853,7 @@
               "time": 867.61,
               "x": -1769.4,
               "y": 468.4,
+              "z": 17.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -772,6 +862,7 @@
               "time": 868.11,
               "x": -1754.0,
               "y": 528.5,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -780,6 +871,7 @@
               "time": 868.61,
               "x": -1741.4,
               "y": 585.0,
+              "z": 31.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -788,6 +880,7 @@
               "time": 869.11,
               "x": -1729.7,
               "y": 641.8,
+              "z": 31.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -796,6 +889,7 @@
               "time": 869.61,
               "x": -1722.9,
               "y": 679.9,
+              "z": 32.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -804,6 +898,7 @@
               "time": 870.11,
               "x": -1722.9,
               "y": 679.9,
+              "z": 32.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -812,6 +907,7 @@
               "time": 870.61,
               "x": -1724.4,
               "y": 680.0,
+              "z": 32.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -820,6 +916,7 @@
               "time": 871.11,
               "x": -1779.8,
               "y": 678.7,
+              "z": 32.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -828,6 +925,7 @@
               "time": 871.61,
               "x": -1834.9,
               "y": 667.8,
+              "z": 32.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -836,6 +934,7 @@
               "time": 872.11,
               "x": -1872.0,
               "y": 625.0,
+              "z": 33.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -844,6 +943,7 @@
               "time": 872.61,
               "x": -1901.0,
               "y": 576.6,
+              "z": 71.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -852,6 +952,7 @@
               "time": 873.11,
               "x": -1950.4,
               "y": 542.9,
+              "z": 64.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -860,6 +961,7 @@
               "time": 873.61,
               "x": -2001.8,
               "y": 518.6,
+              "z": 64.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -868,6 +970,7 @@
               "time": 874.11,
               "x": -2041.4,
               "y": 476.6,
+              "z": 52.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -876,6 +979,7 @@
               "time": 874.61,
               "x": -2041.9,
               "y": 436.2,
+              "z": 26.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -884,6 +988,7 @@
               "time": 875.11,
               "x": -2042.6,
               "y": 436.6,
+              "z": 26.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -892,6 +997,7 @@
               "time": 875.61,
               "x": -2043.9,
               "y": 429.4,
+              "z": 26.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -900,6 +1006,7 @@
               "time": 876.11,
               "x": -2040.0,
               "y": 415.7,
+              "z": 22.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -908,6 +1015,7 @@
               "time": 876.61,
               "x": -2043.9,
               "y": 382.9,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -916,6 +1024,7 @@
               "time": 877.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -924,6 +1033,7 @@
               "time": 877.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -932,6 +1042,7 @@
               "time": 878.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -940,6 +1051,7 @@
               "time": 878.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -948,6 +1060,7 @@
               "time": 879.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -956,6 +1069,7 @@
               "time": 879.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -964,6 +1078,7 @@
               "time": 880.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -972,6 +1087,7 @@
               "time": 880.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -980,6 +1096,7 @@
               "time": 881.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -988,6 +1105,7 @@
               "time": 881.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -996,6 +1114,7 @@
               "time": 882.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1004,6 +1123,7 @@
               "time": 882.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1012,6 +1132,7 @@
               "time": 883.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1020,6 +1141,7 @@
               "time": 883.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1028,6 +1150,7 @@
               "time": 884.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1036,6 +1159,7 @@
               "time": 884.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1044,6 +1168,7 @@
               "time": 885.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1052,6 +1177,7 @@
               "time": 885.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1060,6 +1186,7 @@
               "time": 886.11,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1068,6 +1195,7 @@
               "time": 886.61,
               "x": -2043.9,
               "y": 382.8,
+              "z": 8.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1076,6 +1204,7 @@
               "time": 887.11,
               "x": -2044.0,
               "y": 379.9,
+              "z": 8.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1084,6 +1213,7 @@
               "time": 887.61,
               "x": -2043.9,
               "y": 377.0,
+              "z": 8.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1092,6 +1222,7 @@
               "time": 888.11,
               "x": -2036.1,
               "y": 382.9,
+              "z": 7.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1100,6 +1231,7 @@
               "time": 888.61,
               "x": -2017.8,
               "y": 396.7,
+              "z": 7.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1108,6 +1240,7 @@
               "time": 889.11,
               "x": -1989.7,
               "y": 417.9,
+              "z": 8.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1116,6 +1249,7 @@
               "time": 889.61,
               "x": -1959.2,
               "y": 441.0,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1124,6 +1258,7 @@
               "time": 890.11,
               "x": -1934.6,
               "y": 459.6,
+              "z": 10.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1132,6 +1267,7 @@
               "time": 890.61,
               "x": -1909.2,
               "y": 479.0,
+              "z": 11.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1140,6 +1276,7 @@
               "time": 891.11,
               "x": -1901.7,
               "y": 484.7,
+              "z": 11.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1148,6 +1285,7 @@
               "time": 891.61,
               "x": -1909.0,
               "y": 479.1,
+              "z": 11.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1156,6 +1294,7 @@
               "time": 892.11,
               "x": -1926.8,
               "y": 465.6,
+              "z": 10.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1164,6 +1303,7 @@
               "time": 892.61,
               "x": -1934.8,
               "y": 459.5,
+              "z": 10.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1172,6 +1312,7 @@
               "time": 893.11,
               "x": -1923.7,
               "y": 468.0,
+              "z": 10.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1180,6 +1321,7 @@
               "time": 893.61,
               "x": -1928.1,
               "y": 463.4,
+              "z": 10.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1188,6 +1330,7 @@
               "time": 894.11,
               "x": -1939.5,
               "y": 451.3,
+              "z": 10.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1196,6 +1339,7 @@
               "time": 894.61,
               "x": -1951.0,
               "y": 431.7,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1204,6 +1348,7 @@
               "time": 895.11,
               "x": -1949.5,
               "y": 431.4,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1212,6 +1357,7 @@
               "time": 895.61,
               "x": -1940.2,
               "y": 441.5,
+              "z": 9.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1220,6 +1366,7 @@
               "time": 896.11,
               "x": -1941.7,
               "y": 440.3,
+              "z": 9.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1228,6 +1375,7 @@
               "time": 896.61,
               "x": -1955.1,
               "y": 428.5,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1236,6 +1384,7 @@
               "time": 897.11,
               "x": -1978.2,
               "y": 408.3,
+              "z": 8.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1244,6 +1393,7 @@
               "time": 897.61,
               "x": -2007.0,
               "y": 383.3,
+              "z": 7.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1252,6 +1402,7 @@
               "time": 898.11,
               "x": -2007.4,
               "y": 383.0,
+              "z": 7.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1260,6 +1411,7 @@
               "time": 898.61,
               "x": -1993.8,
               "y": 394.9,
+              "z": 8.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1268,6 +1420,7 @@
               "time": 899.11,
               "x": -1970.5,
               "y": 415.2,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1276,6 +1429,7 @@
               "time": 899.61,
               "x": -1965.0,
               "y": 422.1,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1284,6 +1438,7 @@
               "time": 900.11,
               "x": -1964.9,
               "y": 422.0,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1292,6 +1447,7 @@
               "time": 900.61,
               "x": -1967.6,
               "y": 424.7,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1300,6 +1456,7 @@
               "time": 901.11,
               "x": -1967.7,
               "y": 424.2,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1308,6 +1465,7 @@
               "time": 901.61,
               "x": -1966.1,
               "y": 422.1,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1316,6 +1474,7 @@
               "time": 902.11,
               "x": -1962.7,
               "y": 418.1,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1324,6 +1483,7 @@
               "time": 902.61,
               "x": -1961.8,
               "y": 417.0,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1332,6 +1492,7 @@
               "time": 903.11,
               "x": -1956.6,
               "y": 411.5,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1340,6 +1501,7 @@
               "time": 903.61,
               "x": -1955.3,
               "y": 410.3,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1348,6 +1510,7 @@
               "time": 904.11,
               "x": -1955.1,
               "y": 410.1,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1356,6 +1519,7 @@
               "time": 904.61,
               "x": -1955.8,
               "y": 410.7,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1364,6 +1528,7 @@
               "time": 905.11,
               "x": -1953.9,
               "y": 408.7,
+              "z": 9.0,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -1383,10 +1548,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -1394,6 +1560,7 @@
               "time": 1007.14,
               "x": -1036.2,
               "y": 1349.1,
+              "z": -111.3,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -1402,6 +1569,7 @@
               "time": 1007.64,
               "x": -1092.0,
               "y": 1273.0,
+              "z": -107.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1410,6 +1578,7 @@
               "time": 1008.14,
               "x": -1130.7,
               "y": 1179.2,
+              "z": -48.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1418,6 +1587,7 @@
               "time": 1008.64,
               "x": -1210.6,
               "y": 1107.2,
+              "z": 13.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1426,6 +1596,7 @@
               "time": 1009.14,
               "x": -1268.6,
               "y": 1112.7,
+              "z": 32.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1434,6 +1605,7 @@
               "time": 1009.64,
               "x": -1325.3,
               "y": 1119.5,
+              "z": 33.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1442,6 +1614,7 @@
               "time": 1010.14,
               "x": -1382.5,
               "y": 1124.7,
+              "z": 34.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1450,6 +1623,7 @@
               "time": 1010.64,
               "x": -1440.4,
               "y": 1124.0,
+              "z": 35.3,
               "area": "Window",
               "is_entry": false
             },
@@ -1458,6 +1632,7 @@
               "time": 1011.14,
               "x": -1498.1,
               "y": 1118.7,
+              "z": 35.5,
               "area": "Window",
               "is_entry": false
             },
@@ -1466,6 +1641,7 @@
               "time": 1011.64,
               "x": -1555.9,
               "y": 1114.6,
+              "z": 35.0,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1474,6 +1650,7 @@
               "time": 1012.14,
               "x": -1613.4,
               "y": 1109.5,
+              "z": 33.3,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1482,6 +1659,7 @@
               "time": 1012.64,
               "x": -1671.3,
               "y": 1110.5,
+              "z": 31.1,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1490,6 +1668,7 @@
               "time": 1013.14,
               "x": -1728.5,
               "y": 1116.4,
+              "z": 31.5,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1498,6 +1677,7 @@
               "time": 1013.64,
               "x": -1784.7,
               "y": 1128.9,
+              "z": 32.9,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1506,6 +1686,7 @@
               "time": 1014.14,
               "x": -1819.4,
               "y": 1127.5,
+              "z": 33.1,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1514,6 +1695,7 @@
               "time": 1014.64,
               "x": -1875.7,
               "y": 1136.2,
+              "z": 32.3,
               "area": "Double Barrels",
               "is_entry": false
             },
@@ -1522,6 +1704,7 @@
               "time": 1015.14,
               "x": -1919.3,
               "y": 1133.4,
+              "z": 32.7,
               "area": "Double Barrels",
               "is_entry": false
             },
@@ -1530,6 +1713,7 @@
               "time": 1015.64,
               "x": -1956.4,
               "y": 1172.3,
+              "z": 32.3,
               "area": "Double Barrels",
               "is_entry": false
             },
@@ -1538,6 +1722,7 @@
               "time": 1016.14,
               "x": -2005.1,
               "y": 1190.0,
+              "z": 33.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1546,6 +1731,7 @@
               "time": 1016.64,
               "x": -2048.3,
               "y": 1224.6,
+              "z": 34.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1554,6 +1740,7 @@
               "time": 1017.14,
               "x": -2043.0,
               "y": 1251.4,
+              "z": 33.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1562,6 +1749,7 @@
               "time": 1017.64,
               "x": -2021.2,
               "y": 1294.4,
+              "z": 32.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1570,6 +1758,7 @@
               "time": 1018.14,
               "x": -2026.8,
               "y": 1352.0,
+              "z": 33.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1578,6 +1767,7 @@
               "time": 1018.64,
               "x": -2021.4,
               "y": 1409.5,
+              "z": 32.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1586,6 +1776,7 @@
               "time": 1019.14,
               "x": -2001.8,
               "y": 1462.9,
+              "z": 31.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1594,6 +1785,7 @@
               "time": 1019.64,
               "x": -1989.8,
               "y": 1519.3,
+              "z": 31.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1602,6 +1794,7 @@
               "time": 1020.14,
               "x": -1992.0,
               "y": 1577.5,
+              "z": 31.4,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1610,6 +1803,7 @@
               "time": 1020.64,
               "x": -1998.7,
               "y": 1603.6,
+              "z": 31.4,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1618,6 +1812,7 @@
               "time": 1021.14,
               "x": -2004.3,
               "y": 1606.8,
+              "z": 31.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1626,6 +1821,7 @@
               "time": 1021.64,
               "x": -2002.6,
               "y": 1613.8,
+              "z": 31.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1634,6 +1830,7 @@
               "time": 1022.14,
               "x": -1994.8,
               "y": 1704.1,
+              "z": 31.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1642,6 +1839,7 @@
               "time": 1022.64,
               "x": -1979.0,
               "y": 1700.5,
+              "z": 31.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1650,6 +1848,7 @@
               "time": 1023.14,
               "x": -2000.6,
               "y": 1585.5,
+              "z": 31.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1658,6 +1857,7 @@
               "time": 1023.64,
               "x": -2021.4,
               "y": 1606.3,
+              "z": 32.3,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1666,6 +1866,7 @@
               "time": 1024.14,
               "x": -1989.5,
               "y": 1721.8,
+              "z": 31.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1674,6 +1875,7 @@
               "time": 1040.14,
               "x": -1977.0,
               "y": 1698.7,
+              "z": 31.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1682,6 +1884,7 @@
               "time": 1040.64,
               "x": -1970.5,
               "y": 1576.1,
+              "z": 32.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1690,6 +1893,7 @@
               "time": 1041.14,
               "x": -1966.4,
               "y": 1453.4,
+              "z": 32.1,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1698,6 +1902,7 @@
               "time": 1041.64,
               "x": -1931.5,
               "y": 1347.6,
+              "z": 30.4,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -1706,6 +1911,7 @@
               "time": 1042.14,
               "x": -1839.2,
               "y": 1262.8,
+              "z": 94.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1714,6 +1920,7 @@
               "time": 1042.64,
               "x": -1763.2,
               "y": 1161.0,
+              "z": 31.8,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1722,6 +1929,7 @@
               "time": 1043.14,
               "x": -1692.9,
               "y": 1090.3,
+              "z": 31.6,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1730,6 +1938,7 @@
               "time": 1043.64,
               "x": -1674.3,
               "y": 977.6,
+              "z": 30.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -1738,6 +1947,7 @@
               "time": 1044.14,
               "x": -1670.8,
               "y": 852.7,
+              "z": 30.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1746,6 +1956,7 @@
               "time": 1044.64,
               "x": -1683.5,
               "y": 735.7,
+              "z": 30.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1754,6 +1965,7 @@
               "time": 1045.14,
               "x": -1728.9,
               "y": 628.2,
+              "z": 74.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1762,6 +1974,7 @@
               "time": 1045.64,
               "x": -1786.9,
               "y": 529.0,
+              "z": 80.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1770,6 +1983,7 @@
               "time": 1046.14,
               "x": -1798.8,
               "y": 425.4,
+              "z": 91.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1778,6 +1992,7 @@
               "time": 1046.64,
               "x": -1825.0,
               "y": 332.8,
+              "z": 0.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1786,6 +2001,7 @@
               "time": 1047.14,
               "x": -1865.6,
               "y": 226.1,
+              "z": 2.9,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -1800,10 +2016,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -1811,6 +2028,7 @@
               "time": 976.14,
               "x": -1944.4,
               "y": 1718.4,
+              "z": 33.7,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -1819,6 +2037,7 @@
               "time": 976.64,
               "x": -1942.1,
               "y": 1660.0,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1827,6 +2046,7 @@
               "time": 977.14,
               "x": -1942.0,
               "y": 1601.6,
+              "z": 34.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1835,6 +2055,7 @@
               "time": 977.64,
               "x": -1943.9,
               "y": 1543.3,
+              "z": 36.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1843,6 +2064,7 @@
               "time": 978.14,
               "x": -1962.9,
               "y": 1512.5,
+              "z": 34.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1851,6 +2073,7 @@
               "time": 978.64,
               "x": -1972.5,
               "y": 1493.4,
+              "z": 32.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1859,6 +2082,7 @@
               "time": 979.14,
               "x": -1943.5,
               "y": 1447.8,
+              "z": 34.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1867,6 +2091,7 @@
               "time": 979.64,
               "x": -1948.4,
               "y": 1430.7,
+              "z": 33.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1875,6 +2100,7 @@
               "time": 980.14,
               "x": -1970.0,
               "y": 1373.5,
+              "z": 28.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1883,6 +2109,7 @@
               "time": 980.64,
               "x": -1984.4,
               "y": 1337.4,
+              "z": 28.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1891,6 +2118,7 @@
               "time": 981.14,
               "x": -1984.4,
               "y": 1329.8,
+              "z": 28.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1899,6 +2127,7 @@
               "time": 981.64,
               "x": -1984.8,
               "y": 1322.3,
+              "z": 29.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1907,6 +2136,7 @@
               "time": 982.14,
               "x": -1973.9,
               "y": 1424.4,
+              "z": 73.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1915,6 +2145,7 @@
               "time": 982.64,
               "x": -1973.7,
               "y": 1530.4,
+              "z": 39.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -1923,6 +2154,7 @@
               "time": 983.14,
               "x": -1968.8,
               "y": 1634.0,
+              "z": 32.3,
               "area": "Back Plat",
               "is_entry": false
             }
@@ -1942,10 +2174,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -1953,6 +2186,7 @@
               "time": 1123.91,
               "x": -1942.2,
               "y": 1730.4,
+              "z": 33.4,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -1961,6 +2195,7 @@
               "time": 1124.41,
               "x": -1942.1,
               "y": 1674.8,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1969,6 +2204,7 @@
               "time": 1124.91,
               "x": -1942.1,
               "y": 1619.0,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1977,6 +2213,7 @@
               "time": 1125.41,
               "x": -1942.0,
               "y": 1577.2,
+              "z": 35.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1985,6 +2222,7 @@
               "time": 1125.91,
               "x": -1942.0,
               "y": 1540.7,
+              "z": 36.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -1993,6 +2231,7 @@
               "time": 1126.41,
               "x": -1942.2,
               "y": 1491.2,
+              "z": 36.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2001,6 +2240,7 @@
               "time": 1126.91,
               "x": -1942.7,
               "y": 1435.5,
+              "z": 34.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2009,6 +2249,7 @@
               "time": 1127.41,
               "x": -1937.6,
               "y": 1347.9,
+              "z": 29.8,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -2017,6 +2258,7 @@
               "time": 1127.91,
               "x": -1886.6,
               "y": 1253.8,
+              "z": 32.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2025,6 +2267,7 @@
               "time": 1128.41,
               "x": -1794.3,
               "y": 1201.2,
+              "z": 32.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2033,6 +2276,7 @@
               "time": 1128.91,
               "x": -1672.2,
               "y": 1175.3,
+              "z": 31.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2041,6 +2285,7 @@
               "time": 1129.41,
               "x": -1550.4,
               "y": 1157.5,
+              "z": 74.4,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2049,6 +2294,7 @@
               "time": 1129.91,
               "x": -1425.7,
               "y": 1139.4,
+              "z": 51.1,
               "area": "Window",
               "is_entry": false
             },
@@ -2057,6 +2303,7 @@
               "time": 1130.41,
               "x": -1325.5,
               "y": 1122.6,
+              "z": 33.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2065,6 +2312,7 @@
               "time": 1130.91,
               "x": -1218.8,
               "y": 1112.7,
+              "z": 17.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2073,6 +2321,7 @@
               "time": 1131.41,
               "x": -1129.5,
               "y": 1161.5,
+              "z": -40.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2081,6 +2330,7 @@
               "time": 1131.91,
               "x": -1097.3,
               "y": 1256.7,
+              "z": -99.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2089,6 +2339,7 @@
               "time": 1132.41,
               "x": -1080.8,
               "y": 1361.1,
+              "z": -112.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2097,6 +2348,7 @@
               "time": 1132.91,
               "x": -1014.0,
               "y": 1432.7,
+              "z": -112.9,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -2111,10 +2363,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -2122,6 +2375,7 @@
               "time": 1122.91,
               "x": -2009.6,
               "y": 1706.8,
+              "z": 32.4,
               "area": "Back Plat",
               "is_entry": true
             },
@@ -2130,6 +2384,7 @@
               "time": 1123.41,
               "x": -1993.9,
               "y": 1652.0,
+              "z": 31.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2138,6 +2393,7 @@
               "time": 1123.91,
               "x": -2007.1,
               "y": 1609.8,
+              "z": 31.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2146,6 +2402,7 @@
               "time": 1124.41,
               "x": -1996.9,
               "y": 1573.0,
+              "z": 31.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2154,6 +2411,7 @@
               "time": 1124.91,
               "x": -1980.2,
               "y": 1538.3,
+              "z": 32.3,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2162,6 +2420,7 @@
               "time": 1125.41,
               "x": -1994.1,
               "y": 1527.2,
+              "z": 31.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2170,6 +2429,7 @@
               "time": 1125.91,
               "x": -1997.2,
               "y": 1522.8,
+              "z": 31.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2178,6 +2438,7 @@
               "time": 1126.41,
               "x": -2025.6,
               "y": 1481.3,
+              "z": 33.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2186,6 +2447,7 @@
               "time": 1126.91,
               "x": -2025.9,
               "y": 1428.7,
+              "z": 33.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2194,6 +2456,7 @@
               "time": 1127.41,
               "x": -2026.7,
               "y": 1370.4,
+              "z": 33.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2202,6 +2465,7 @@
               "time": 1127.91,
               "x": -1996.4,
               "y": 1301.4,
+              "z": 30.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2210,6 +2474,7 @@
               "time": 1128.41,
               "x": -1914.9,
               "y": 1234.4,
+              "z": 31.6,
               "area": "Double Barrels",
               "is_entry": false
             },
@@ -2218,6 +2483,7 @@
               "time": 1128.91,
               "x": -1809.7,
               "y": 1198.9,
+              "z": 32.2,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2226,6 +2492,7 @@
               "time": 1129.41,
               "x": -1698.6,
               "y": 1197.5,
+              "z": 31.3,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2234,6 +2501,7 @@
               "time": 1129.91,
               "x": -1578.1,
               "y": 1177.3,
+              "z": 34.1,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2242,6 +2510,7 @@
               "time": 1130.41,
               "x": -1454.2,
               "y": 1161.3,
+              "z": 35.3,
               "area": "Window",
               "is_entry": false
             },
@@ -2250,6 +2519,7 @@
               "time": 1130.91,
               "x": -1331.4,
               "y": 1143.2,
+              "z": 33.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2258,6 +2528,7 @@
               "time": 1131.41,
               "x": -1216.1,
               "y": 1108.6,
+              "z": 16.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2266,6 +2537,7 @@
               "time": 1131.91,
               "x": -1136.1,
               "y": 1145.2,
+              "z": -31.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2274,6 +2546,7 @@
               "time": 1132.41,
               "x": -1119.3,
               "y": 1250.1,
+              "z": -96.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2282,6 +2555,7 @@
               "time": 1132.91,
               "x": -1122.4,
               "y": 1358.8,
+              "z": -111.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2290,6 +2564,7 @@
               "time": 1133.41,
               "x": -1092.5,
               "y": 1405.3,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2298,6 +2573,7 @@
               "time": 1133.91,
               "x": -1035.1,
               "y": 1409.2,
+              "z": -112.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2306,6 +2582,7 @@
               "time": 1134.41,
               "x": -963.9,
               "y": 1401.5,
+              "z": -112.4,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -2329,10 +2606,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -2340,6 +2618,7 @@
               "time": 1445.45,
               "x": -987.9,
               "y": 1370.1,
+              "z": -111.5,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -2348,6 +2627,7 @@
               "time": 1445.95,
               "x": -1042.3,
               "y": 1340.3,
+              "z": -111.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2356,6 +2636,7 @@
               "time": 1446.45,
               "x": -1072.6,
               "y": 1280.6,
+              "z": -111.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2364,6 +2645,7 @@
               "time": 1446.95,
               "x": -1115.0,
               "y": 1172.5,
+              "z": -51.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2372,6 +2654,7 @@
               "time": 1447.45,
               "x": -1213.2,
               "y": 1098.1,
+              "z": 14.9,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2380,6 +2663,7 @@
               "time": 1447.95,
               "x": -1332.4,
               "y": 1078.6,
+              "z": 36.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2388,6 +2672,7 @@
               "time": 1448.45,
               "x": -1454.1,
               "y": 1082.2,
+              "z": 37.0,
               "area": "Window",
               "is_entry": false
             },
@@ -2396,6 +2681,7 @@
               "time": 1448.95,
               "x": -1573.9,
               "y": 1104.6,
+              "z": 34.9,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2404,6 +2690,7 @@
               "time": 1449.45,
               "x": -1686.8,
               "y": 1152.1,
+              "z": 30.9,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2412,6 +2699,7 @@
               "time": 1449.95,
               "x": -1786.6,
               "y": 1227.1,
+              "z": 87.7,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2420,6 +2708,7 @@
               "time": 1450.45,
               "x": -1888.3,
               "y": 1299.9,
+              "z": 38.4,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -2428,6 +2717,7 @@
               "time": 1450.95,
               "x": -1969.7,
               "y": 1374.3,
+              "z": 28.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2436,6 +2726,7 @@
               "time": 1451.45,
               "x": -2017.5,
               "y": 1480.0,
+              "z": 33.2,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2444,6 +2735,7 @@
               "time": 1451.95,
               "x": -2025.9,
               "y": 1594.3,
+              "z": 32.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2452,6 +2744,7 @@
               "time": 1452.45,
               "x": -2025.9,
               "y": 1688.1,
+              "z": 33.1,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2460,6 +2753,7 @@
               "time": 1452.95,
               "x": -2010.7,
               "y": 1697.4,
+              "z": 32.4,
               "area": "Back Plat",
               "is_entry": false
             }
@@ -2487,127 +2781,267 @@
       "round_num": 13,
       "ct_players": [
         {
-          "name": "sh1ro",
-          "buy_type": "pistol",
+          "name": "chopper",
+          "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
             "armor_value": 0,
             "has_helmet": false,
             "total_value": 0,
-            "health": 100.0
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
-              "tick": 140298,
-              "time": 2192.16,
-              "x": -1665.9,
-              "y": 1683.4,
+              "tick": 141642,
+              "time": 2213.16,
+              "x": -1013.4,
+              "y": 1350.4,
+              "z": -111.0,
               "area": "B-Site Area",
               "is_entry": true
             },
             {
-              "tick": 140330,
-              "time": 2192.66,
-              "x": -1658.0,
-              "y": 1655.8,
+              "tick": 141674,
+              "time": 2213.66,
+              "x": -1064.4,
+              "y": 1343.5,
+              "z": -111.8,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140362,
-              "time": 2193.16,
-              "x": -1659.0,
-              "y": 1648.1,
+              "tick": 141706,
+              "time": 2214.16,
+              "x": -1072.8,
+              "y": 1284.1,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140394,
-              "time": 2193.66,
-              "x": -1667.9,
-              "y": 1653.6,
+              "tick": 141738,
+              "time": 2214.66,
+              "x": -1079.5,
+              "y": 1223.1,
+              "z": -83.0,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140426,
-              "time": 2194.16,
-              "x": -1652.0,
-              "y": 1644.2,
+              "tick": 141770,
+              "time": 2215.16,
+              "x": -1114.6,
+              "y": 1180.3,
+              "z": -55.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140458,
-              "time": 2194.66,
-              "x": -1630.2,
-              "y": 1631.1,
+              "tick": 141802,
+              "time": 2215.66,
+              "x": -1133.9,
+              "y": 1158.3,
+              "z": -37.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140490,
-              "time": 2195.16,
-              "x": -1647.0,
-              "y": 1640.6,
+              "tick": 141834,
+              "time": 2216.16,
+              "x": -1164.4,
+              "y": 1130.9,
+              "z": -12.9,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140522,
-              "time": 2195.66,
-              "x": -1646.6,
-              "y": 1638.5,
+              "tick": 141866,
+              "time": 2216.66,
+              "x": -1223.7,
+              "y": 1131.1,
+              "z": 20.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140554,
-              "time": 2196.16,
-              "x": -1658.6,
-              "y": 1641.2,
+              "tick": 141898,
+              "time": 2217.16,
+              "x": -1281.3,
+              "y": 1150.4,
+              "z": 32.1,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140586,
-              "time": 2196.66,
-              "x": -1639.9,
-              "y": 1640.8,
+              "tick": 141930,
+              "time": 2217.66,
+              "x": -1341.0,
+              "y": 1163.2,
+              "z": 32.9,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140618,
-              "time": 2197.16,
-              "x": -1623.1,
-              "y": 1626.6,
+              "tick": 141962,
+              "time": 2218.16,
+              "x": -1393.7,
+              "y": 1180.3,
+              "z": 34.1,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 141994,
+              "time": 2218.66,
+              "x": -1449.0,
+              "y": 1203.8,
+              "z": 36.4,
+              "area": "Window",
+              "is_entry": false
+            },
+            {
+              "tick": 142026,
+              "time": 2219.16,
+              "x": -1503.0,
+              "y": 1216.1,
+              "z": 37.1,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 142058,
+              "time": 2219.66,
+              "x": -1551.3,
+              "y": 1224.4,
+              "z": 36.8,
+              "area": "Back site Tucked",
+              "is_entry": false
+            },
+            {
+              "tick": 142090,
+              "time": 2220.16,
+              "x": -1605.1,
+              "y": 1244.6,
+              "z": 37.6,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142122,
+              "time": 2220.66,
+              "x": -1664.9,
+              "y": 1250.6,
+              "z": 35.3,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142154,
+              "time": 2221.16,
+              "x": -1686.3,
+              "y": 1275.8,
+              "z": 36.8,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142186,
+              "time": 2221.66,
+              "x": -1714.2,
+              "y": 1325.4,
+              "z": 39.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142218,
+              "time": 2222.16,
+              "x": -1766.6,
+              "y": 1357.7,
+              "z": 41.5,
+              "area": "B-Site General",
+              "is_entry": false
+            },
+            {
+              "tick": 142250,
+              "time": 2222.66,
+              "x": -1827.3,
+              "y": 1362.7,
+              "z": 39.5,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 140650,
-              "time": 2197.66,
-              "x": -1624.0,
-              "y": 1625.5,
+              "tick": 142282,
+              "time": 2223.16,
+              "x": -1888.0,
+              "y": 1371.4,
+              "z": 35.6,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 142314,
+              "time": 2223.66,
+              "x": -1927.6,
+              "y": 1377.4,
+              "z": 33.2,
+              "area": "Single Barrel",
+              "is_entry": false
+            },
+            {
+              "tick": 142346,
+              "time": 2224.16,
+              "x": -1955.1,
+              "y": 1398.0,
+              "z": 31.3,
+              "area": "Back Plat",
+              "is_entry": false
+            },
+            {
+              "tick": 142378,
+              "time": 2224.66,
+              "x": -1950.5,
+              "y": 1491.9,
+              "z": 35.6,
               "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142410,
+              "time": 2225.16,
+              "x": -1953.8,
+              "y": 1609.5,
+              "z": 33.4,
+              "area": "B-Site Area",
+              "is_entry": false
+            },
+            {
+              "tick": 142442,
+              "time": 2225.66,
+              "x": -2023.1,
+              "y": 1693.4,
+              "z": 33.0,
+              "area": "Back Plat",
               "is_entry": false
             }
           ],
           "utility_throws": [],
           "entry_point": "unknown",
           "primary_position": "B-Site Area",
-          "time_in_site": 5.5
+          "time_in_site": 12.5
         },
         {
           "name": "zweih",
-          "buy_type": "pistol",
+          "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -2615,6 +3049,7 @@
               "time": 2211.16,
               "x": -970.2,
               "y": 1480.3,
+              "z": -110.8,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -2623,6 +3058,7 @@
               "time": 2211.66,
               "x": -1024.4,
               "y": 1452.6,
+              "z": -112.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2631,6 +3067,7 @@
               "time": 2212.16,
               "x": -1054.3,
               "y": 1409.0,
+              "z": -112.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2639,6 +3076,7 @@
               "time": 2212.66,
               "x": -1090.2,
               "y": 1359.1,
+              "z": -112.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2647,6 +3085,7 @@
               "time": 2213.16,
               "x": -1093.4,
               "y": 1331.5,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2655,6 +3094,7 @@
               "time": 2213.66,
               "x": -1070.1,
               "y": 1276.3,
+              "z": -109.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2663,6 +3103,7 @@
               "time": 2214.16,
               "x": -1082.5,
               "y": 1218.7,
+              "z": -81.1,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2671,6 +3112,7 @@
               "time": 2214.66,
               "x": -1096.0,
               "y": 1170.2,
+              "z": -55.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2679,6 +3121,7 @@
               "time": 2215.16,
               "x": -1103.2,
               "y": 1121.0,
+              "z": -36.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2687,6 +3130,7 @@
               "time": 2215.66,
               "x": -1126.1,
               "y": 1082.8,
+              "z": -20.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2695,6 +3139,7 @@
               "time": 2216.16,
               "x": -1181.6,
               "y": 1056.6,
+              "z": 1.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2703,6 +3148,7 @@
               "time": 2216.66,
               "x": -1241.8,
               "y": 1050.7,
+              "z": 29.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2711,6 +3157,7 @@
               "time": 2217.16,
               "x": -1299.0,
               "y": 1069.2,
+              "z": 36.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2719,6 +3166,7 @@
               "time": 2217.66,
               "x": -1358.8,
               "y": 1061.9,
+              "z": 39.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2727,6 +3175,7 @@
               "time": 2218.16,
               "x": -1401.2,
               "y": 1054.4,
+              "z": 40.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2735,6 +3184,7 @@
               "time": 2218.66,
               "x": -1457.7,
               "y": 1057.6,
+              "z": 39.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2743,6 +3193,7 @@
               "time": 2219.16,
               "x": -1515.1,
               "y": 1070.5,
+              "z": 36.4,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2751,6 +3202,7 @@
               "time": 2219.66,
               "x": -1507.6,
               "y": 1093.4,
+              "z": 35.9,
               "area": "Window",
               "is_entry": false
             },
@@ -2759,6 +3211,7 @@
               "time": 2220.16,
               "x": -1568.9,
               "y": 1071.8,
+              "z": 35.5,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2767,6 +3220,7 @@
               "time": 2220.66,
               "x": -1682.5,
               "y": 1067.3,
+              "z": 31.3,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2775,6 +3229,7 @@
               "time": 2221.16,
               "x": -1713.0,
               "y": 1066.3,
+              "z": 31.8,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2783,6 +3238,7 @@
               "time": 2221.66,
               "x": -1792.8,
               "y": 1079.7,
+              "z": 34.9,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -2791,6 +3247,7 @@
               "time": 2222.16,
               "x": -1863.4,
               "y": 1075.4,
+              "z": 34.0,
               "area": "Big Box B Site",
               "is_entry": false
             },
@@ -2799,6 +3256,7 @@
               "time": 2222.66,
               "x": -1899.9,
               "y": 1083.1,
+              "z": 33.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2807,6 +3265,7 @@
               "time": 2223.16,
               "x": -1929.4,
               "y": 1155.4,
+              "z": 32.4,
               "area": "Double Barrels",
               "is_entry": false
             },
@@ -2815,6 +3274,7 @@
               "time": 2223.66,
               "x": -2037.4,
               "y": 1193.7,
+              "z": 34.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2823,6 +3283,7 @@
               "time": 2224.16,
               "x": -2029.9,
               "y": 1237.2,
+              "z": 33.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2831,6 +3292,7 @@
               "time": 2224.66,
               "x": -1988.5,
               "y": 1325.8,
+              "z": 29.3,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2839,6 +3301,7 @@
               "time": 2225.16,
               "x": -2006.5,
               "y": 1408.1,
+              "z": 30.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2847,6 +3310,7 @@
               "time": 2225.66,
               "x": -2014.3,
               "y": 1517.9,
+              "z": 33.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2855,6 +3319,7 @@
               "time": 2226.16,
               "x": -2005.1,
               "y": 1602.2,
+              "z": 31.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2863,6 +3328,7 @@
               "time": 2226.66,
               "x": -2015.5,
               "y": 1674.8,
+              "z": 32.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -2871,6 +3337,7 @@
               "time": 2227.16,
               "x": -2014.3,
               "y": 1715.8,
+              "z": 32.5,
               "area": "Back Plat",
               "is_entry": false
             }
@@ -2882,13 +3349,14 @@
         },
         {
           "name": "zont1x",
-          "buy_type": "pistol",
+          "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
             "armor_value": 0,
             "has_helmet": false,
             "total_value": 0,
-            "health": 8.0
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -2896,6 +3364,7 @@
               "time": 2238.16,
               "x": -1057.0,
               "y": 1337.6,
+              "z": -111.5,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -2904,6 +3373,7 @@
               "time": 2238.66,
               "x": -1106.2,
               "y": 1226.7,
+              "z": -61.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2912,6 +3382,7 @@
               "time": 2239.16,
               "x": -1125.0,
               "y": 1145.6,
+              "z": -35.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2920,6 +3391,7 @@
               "time": 2239.66,
               "x": -1102.5,
               "y": 1238.9,
+              "z": -90.4,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -2928,6 +3400,7 @@
               "time": 2240.16,
               "x": -1068.4,
               "y": 1352.1,
+              "z": -112.0,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -2938,229 +3411,130 @@
           "time_in_site": 2.0
         },
         {
-          "name": "chopper",
-          "buy_type": "pistol",
+          "name": "sh1ro",
+          "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
-              "tick": 141642,
-              "time": 2213.16,
-              "x": -1013.4,
-              "y": 1350.4,
+              "tick": 140298,
+              "time": 2192.16,
+              "x": -1665.9,
+              "y": 1683.4,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": true
             },
             {
-              "tick": 141674,
-              "time": 2213.66,
-              "x": -1064.4,
-              "y": 1343.5,
+              "tick": 140330,
+              "time": 2192.66,
+              "x": -1658.0,
+              "y": 1655.8,
+              "z": 2.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141706,
-              "time": 2214.16,
-              "x": -1072.8,
-              "y": 1284.1,
+              "tick": 140362,
+              "time": 2193.16,
+              "x": -1659.0,
+              "y": 1648.1,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141738,
-              "time": 2214.66,
-              "x": -1079.5,
-              "y": 1223.1,
+              "tick": 140394,
+              "time": 2193.66,
+              "x": -1667.9,
+              "y": 1653.6,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141770,
-              "time": 2215.16,
-              "x": -1114.6,
-              "y": 1180.3,
+              "tick": 140426,
+              "time": 2194.16,
+              "x": -1652.0,
+              "y": 1644.2,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141802,
-              "time": 2215.66,
-              "x": -1133.9,
-              "y": 1158.3,
+              "tick": 140458,
+              "time": 2194.66,
+              "x": -1630.2,
+              "y": 1631.1,
+              "z": 2.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141834,
-              "time": 2216.16,
-              "x": -1164.4,
-              "y": 1130.9,
+              "tick": 140490,
+              "time": 2195.16,
+              "x": -1647.0,
+              "y": 1640.6,
+              "z": 2.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141866,
-              "time": 2216.66,
-              "x": -1223.7,
-              "y": 1131.1,
+              "tick": 140522,
+              "time": 2195.66,
+              "x": -1646.6,
+              "y": 1638.5,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141898,
-              "time": 2217.16,
-              "x": -1281.3,
-              "y": 1150.4,
+              "tick": 140554,
+              "time": 2196.16,
+              "x": -1658.6,
+              "y": 1641.2,
+              "z": 2.4,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141930,
-              "time": 2217.66,
-              "x": -1341.0,
-              "y": 1163.2,
+              "tick": 140586,
+              "time": 2196.66,
+              "x": -1639.9,
+              "y": 1640.8,
+              "z": 2.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 141962,
-              "time": 2218.16,
-              "x": -1393.7,
-              "y": 1180.3,
-              "area": "Window",
-              "is_entry": false
-            },
-            {
-              "tick": 141994,
-              "time": 2218.66,
-              "x": -1449.0,
-              "y": 1203.8,
-              "area": "Window",
-              "is_entry": false
-            },
-            {
-              "tick": 142026,
-              "time": 2219.16,
-              "x": -1503.0,
-              "y": 1216.1,
-              "area": "Back site Tucked",
-              "is_entry": false
-            },
-            {
-              "tick": 142058,
-              "time": 2219.66,
-              "x": -1551.3,
-              "y": 1224.4,
-              "area": "Back site Tucked",
-              "is_entry": false
-            },
-            {
-              "tick": 142090,
-              "time": 2220.16,
-              "x": -1605.1,
-              "y": 1244.6,
-              "area": "B-Site General",
-              "is_entry": false
-            },
-            {
-              "tick": 142122,
-              "time": 2220.66,
-              "x": -1664.9,
-              "y": 1250.6,
-              "area": "B-Site General",
-              "is_entry": false
-            },
-            {
-              "tick": 142154,
-              "time": 2221.16,
-              "x": -1686.3,
-              "y": 1275.8,
-              "area": "B-Site General",
-              "is_entry": false
-            },
-            {
-              "tick": 142186,
-              "time": 2221.66,
-              "x": -1714.2,
-              "y": 1325.4,
-              "area": "B-Site General",
-              "is_entry": false
-            },
-            {
-              "tick": 142218,
-              "time": 2222.16,
-              "x": -1766.6,
-              "y": 1357.7,
-              "area": "B-Site General",
-              "is_entry": false
-            },
-            {
-              "tick": 142250,
-              "time": 2222.66,
-              "x": -1827.3,
-              "y": 1362.7,
+              "tick": 140618,
+              "time": 2197.16,
+              "x": -1623.1,
+              "y": 1626.6,
+              "z": 2.3,
               "area": "B-Site Area",
               "is_entry": false
             },
             {
-              "tick": 142282,
-              "time": 2223.16,
-              "x": -1888.0,
-              "y": 1371.4,
-              "area": "Single Barrel",
-              "is_entry": false
-            },
-            {
-              "tick": 142314,
-              "time": 2223.66,
-              "x": -1927.6,
-              "y": 1377.4,
-              "area": "Single Barrel",
-              "is_entry": false
-            },
-            {
-              "tick": 142346,
-              "time": 2224.16,
-              "x": -1955.1,
-              "y": 1398.0,
-              "area": "Back Plat",
-              "is_entry": false
-            },
-            {
-              "tick": 142378,
-              "time": 2224.66,
-              "x": -1950.5,
-              "y": 1491.9,
+              "tick": 140650,
+              "time": 2197.66,
+              "x": -1624.0,
+              "y": 1625.5,
+              "z": 2.3,
               "area": "B-Site Area",
-              "is_entry": false
-            },
-            {
-              "tick": 142410,
-              "time": 2225.16,
-              "x": -1953.8,
-              "y": 1609.5,
-              "area": "B-Site Area",
-              "is_entry": false
-            },
-            {
-              "tick": 142442,
-              "time": 2225.66,
-              "x": -2023.1,
-              "y": 1693.4,
-              "area": "Back Plat",
               "is_entry": false
             }
           ],
           "utility_throws": [],
           "entry_point": "unknown",
           "primary_position": "B-Site Area",
-          "time_in_site": 12.5
+          "time_in_site": 5.5
         }
       ]
     },
@@ -3175,11 +3549,12 @@
           "name": "zont1x",
           "buy_type": "eco",
           "equipment": {
-            "primary_weapon": "None",
-            "armor_value": 0,
+            "primary_weapon": "377088.0",
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 99.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -3187,6 +3562,7 @@
               "time": 2451.08,
               "x": -1942.1,
               "y": 1692.5,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -3195,6 +3571,7 @@
               "time": 2451.58,
               "x": -1962.9,
               "y": 1685.2,
+              "z": 32.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3203,6 +3580,7 @@
               "time": 2452.08,
               "x": -1942.4,
               "y": 1686.3,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3211,6 +3589,7 @@
               "time": 2452.58,
               "x": -1958.7,
               "y": 1679.1,
+              "z": 32.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3219,6 +3598,7 @@
               "time": 2453.08,
               "x": -1973.0,
               "y": 1675.1,
+              "z": 32.1,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3227,6 +3607,7 @@
               "time": 2453.58,
               "x": -1942.1,
               "y": 1686.2,
+              "z": 34.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3235,6 +3616,7 @@
               "time": 2454.08,
               "x": -1955.6,
               "y": 1678.4,
+              "z": 33.1,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3243,6 +3625,7 @@
               "time": 2454.58,
               "x": -1978.0,
               "y": 1671.3,
+              "z": 31.9,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3251,6 +3634,7 @@
               "time": 2455.08,
               "x": -1945.2,
               "y": 1680.8,
+              "z": 33.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3259,6 +3643,7 @@
               "time": 2455.58,
               "x": -1957.9,
               "y": 1677.7,
+              "z": 33.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3267,6 +3652,7 @@
               "time": 2456.08,
               "x": -1980.6,
               "y": 1669.2,
+              "z": 31.7,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3275,6 +3661,7 @@
               "time": 2456.58,
               "x": -1960.3,
               "y": 1671.2,
+              "z": 32.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3283,6 +3670,7 @@
               "time": 2457.08,
               "x": -1954.6,
               "y": 1668.9,
+              "z": 33.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3291,6 +3679,7 @@
               "time": 2457.58,
               "x": -1959.4,
               "y": 1637.6,
+              "z": 32.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3299,6 +3688,7 @@
               "time": 2458.08,
               "x": -1957.5,
               "y": 1601.2,
+              "z": 33.4,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3307,6 +3697,7 @@
               "time": 2458.58,
               "x": -1971.9,
               "y": 1576.7,
+              "z": 32.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3315,6 +3706,7 @@
               "time": 2459.08,
               "x": -1984.3,
               "y": 1561.9,
+              "z": 32.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3323,6 +3715,7 @@
               "time": 2459.58,
               "x": -2022.3,
               "y": 1532.7,
+              "z": 33.6,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3331,6 +3724,7 @@
               "time": 2460.08,
               "x": -2002.0,
               "y": 1499.6,
+              "z": 32.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3339,6 +3733,7 @@
               "time": 2460.58,
               "x": -2007.2,
               "y": 1475.8,
+              "z": 32.4,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3347,6 +3742,7 @@
               "time": 2461.08,
               "x": -2014.9,
               "y": 1429.0,
+              "z": 32.5,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3355,6 +3751,7 @@
               "time": 2461.58,
               "x": -1994.3,
               "y": 1388.8,
+              "z": 29.2,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3363,6 +3760,7 @@
               "time": 2462.08,
               "x": -1940.4,
               "y": 1379.0,
+              "z": 32.0,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -3371,6 +3769,7 @@
               "time": 2462.58,
               "x": -1885.3,
               "y": 1386.7,
+              "z": 36.3,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -3379,6 +3778,7 @@
               "time": 2463.08,
               "x": -1829.9,
               "y": 1385.2,
+              "z": 40.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3387,6 +3787,7 @@
               "time": 2463.58,
               "x": -1773.2,
               "y": 1376.3,
+              "z": 42.7,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -3395,6 +3796,7 @@
               "time": 2464.08,
               "x": -1706.1,
               "y": 1311.6,
+              "z": 38.6,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -3403,6 +3805,7 @@
               "time": 2464.58,
               "x": -1664.4,
               "y": 1221.5,
+              "z": 32.3,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -3411,6 +3814,7 @@
               "time": 2465.08,
               "x": -1568.0,
               "y": 1182.9,
+              "z": 34.6,
               "area": "B-Site General",
               "is_entry": false
             },
@@ -3419,6 +3823,7 @@
               "time": 2465.58,
               "x": -1468.6,
               "y": 1147.3,
+              "z": 35.2,
               "area": "Window",
               "is_entry": false
             },
@@ -3427,6 +3832,7 @@
               "time": 2466.08,
               "x": -1372.9,
               "y": 1102.3,
+              "z": 35.8,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3435,6 +3841,7 @@
               "time": 2466.58,
               "x": -1267.6,
               "y": 1083.0,
+              "z": 32.0,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3443,6 +3850,7 @@
               "time": 2467.08,
               "x": -1169.4,
               "y": 1110.9,
+              "z": -7.7,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3451,6 +3859,7 @@
               "time": 2467.58,
               "x": -1092.3,
               "y": 1169.9,
+              "z": -56.5,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3459,6 +3868,7 @@
               "time": 2468.08,
               "x": -1072.2,
               "y": 1264.6,
+              "z": -103.2,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3467,6 +3877,7 @@
               "time": 2468.58,
               "x": -1042.0,
               "y": 1359.4,
+              "z": -111.6,
               "area": "B-Site Area",
               "is_entry": false
             },
@@ -3475,6 +3886,7 @@
               "time": 2469.08,
               "x": -972.5,
               "y": 1435.8,
+              "z": -113.0,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -3497,11 +3909,12 @@
           "name": "zont1x",
           "buy_type": "eco",
           "equipment": {
-            "primary_weapon": "None",
-            "armor_value": 0,
+            "primary_weapon": "377088.0",
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -3509,6 +3922,7 @@
               "time": 2684.95,
               "x": -2010.3,
               "y": 1680.8,
+              "z": 32.4,
               "area": "Back Plat",
               "is_entry": true
             },
@@ -3517,6 +3931,7 @@
               "time": 2685.45,
               "x": -1986.4,
               "y": 1558.2,
+              "z": 31.8,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3525,6 +3940,7 @@
               "time": 2685.95,
               "x": -1961.6,
               "y": 1435.9,
+              "z": 32.0,
               "area": "Back Plat",
               "is_entry": false
             },
@@ -3533,6 +3949,7 @@
               "time": 2686.45,
               "x": -1919.3,
               "y": 1324.8,
+              "z": 66.3,
               "area": "Single Barrel",
               "is_entry": false
             },
@@ -3541,6 +3958,7 @@
               "time": 2686.95,
               "x": -1828.9,
               "y": 1237.9,
+              "z": 86.4,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -3568,10 +3986,11 @@
           "buy_type": "eco",
           "equipment": {
             "primary_weapon": "None",
-            "armor_value": 0,
+            "armor_value": 100,
             "has_helmet": false,
-            "total_value": 0,
-            "health": 100.0
+            "total_value": 500,
+            "health": 100.0,
+            "money": null
           },
           "journey": [
             {
@@ -3579,6 +3998,7 @@
               "time": 3023.56,
               "x": -1702.0,
               "y": 1711.8,
+              "z": 3.2,
               "area": "B-Site Area",
               "is_entry": true
             },
@@ -3587,6 +4007,7 @@
               "time": 3024.06,
               "x": -1685.7,
               "y": 1714.3,
+              "z": 2.5,
               "area": "B-Site Area",
               "is_entry": false
             }
@@ -3608,12 +4029,12 @@
         "total_occurrences": 13,
         "by_buy_type": {
           "pistol": {
-            "count": 5,
-            "percentage": 0.385
+            "count": 1,
+            "percentage": 0.077
           },
           "eco": {
-            "count": 8,
-            "percentage": 0.615
+            "count": 12,
+            "percentage": 0.923
           }
         },
         "entry_points": {

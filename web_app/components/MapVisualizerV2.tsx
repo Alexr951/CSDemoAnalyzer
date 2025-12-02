@@ -91,7 +91,7 @@ export function MapVisualizerV2({ players, viewMode }: MapVisualizerV2Props) {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage: 'url("/maps/dust2_radar.webp")',
-                        backgroundPosition: 'center',
+                        backgroundPosition: 'left center', // Position B-site area (left side of map)
                         backgroundSize: 'cover',
                         opacity: 0.75
                     }}

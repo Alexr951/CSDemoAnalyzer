@@ -42,8 +42,10 @@ const UTILITY_ICONS: Record<string, string> = {
     'Incendiary Grenade': '🔥'
 }
 
-function coordinateToPercent(value: number, min: number, max: number): number {
-    return ((value - min) / (max - min)) * 100
+function coordinateToPercent(value: number, min: number, max: number, invert: boolean = false): number {
+    const percent = ((value - min) / (max - min)) * 100
+    // Invert if needed (for X axis on Dust 2, B-site is on left but coordinates are negative)
+    return invert ? 100 - percent : percent
 }
 
 export function JourneyPath({
@@ -58,27 +60,38 @@ export function JourneyPath({
     }
 
     // Convert coordinates to percentages
-    const points = journey.map((point) => ({
-        x: coordinateToPercent(point.x, mapBounds.minX, mapBounds.maxX),
-        y: coordinateToPercent(point.y, mapBounds.minY, mapBounds.maxY),
-        time: point.time,
-        area: point.area,
-        is_entry: point.is_entry
-    }))
+    // For Dust 2, X needs to be inverted because B-site (negative X, west) should appear on the left side of map
+    // Y needs to be inverted because in CS2 Y increases northward, but SVG/CSS Y=0 is at top
+    const points = journey.map((point) => {
+        const xPercent = coordinateToPercent(point.x, mapBounds.minX, mapBounds.maxX, true) // Invert X: west (negative) -> left
+        const yPercent = coordinateToPercent(point.y, mapBounds.minY, mapBounds.maxY, true) // Invert Y: north (positive) -> top
+        return {
+            x: xPercent,
+            y: yPercent,
+            time: point.time,
+            area: point.area,
+            is_entry: point.is_entry
+        }
+    })
 
-    const utilityPoints = utilityThrows.map((util) => ({
-        x: coordinateToPercent(util.x, mapBounds.minX, mapBounds.maxX),
-        y: coordinateToPercent(util.y, mapBounds.minY, mapBounds.maxY),
-        type: util.type,
-        time: util.time
-    }))
+    const utilityPoints = utilityThrows.map((util) => {
+        const xPercent = coordinateToPercent(util.x, mapBounds.minX, mapBounds.maxX, true) // Invert X
+        const yPercent = coordinateToPercent(util.y, mapBounds.minY, mapBounds.maxY, true) // Invert Y
+        return {
+            x: xPercent,
+            y: yPercent,
+            type: util.type,
+            time: util.time
+        }
+    })
 
     // Create SVG path string
+    // Y is already inverted in coordinateToPercent, so we use it directly
     const pathString = points.map((point, index) => {
         if (index === 0) {
-            return `M ${point.x} ${100 - point.y}` // Flip Y for SVG coordinates
+            return `M ${point.x} ${point.y}`
         }
-        return `L ${point.x} ${100 - point.y}`
+        return `L ${point.x} ${point.y}`
     }).join(' ')
 
     // Calculate dwell times (time spent between points)
@@ -118,9 +131,9 @@ export function JourneyPath({
                     <line
                         key={`segment-${index}`}
                         x1={prevPoint.x}
-                        y1={100 - prevPoint.y}
+                        y1={prevPoint.y}
                         x2={point.x}
-                        y2={100 - point.y}
+                        y2={point.y}
                         stroke={color}
                         strokeWidth={thickness}
                         opacity={opacity}
@@ -132,7 +145,7 @@ export function JourneyPath({
             {/* Entry point marker */}
             <circle
                 cx={points[0].x}
-                cy={100 - points[0].y}
+                cy={points[0].y}
                 r="1.2"
                 fill={color}
                 stroke="white"
@@ -143,7 +156,7 @@ export function JourneyPath({
             {/* End point marker */}
             <circle
                 cx={points[points.length - 1].x}
-                cy={100 - points[points.length - 1].y}
+                cy={points[points.length - 1].y}
                 r="0.8"
                 fill={color}
                 opacity="0.7"
@@ -178,8 +191,8 @@ export function UtilityMarkers({
     return (
         <>
             {utilityThrows.map((util, index) => {
-                const x = coordinateToPercent(util.x, mapBounds.minX, mapBounds.maxX)
-                const y = coordinateToPercent(util.y, mapBounds.minY, mapBounds.maxY)
+                const x = coordinateToPercent(util.x, mapBounds.minX, mapBounds.maxX, true) // Invert X
+                const y = coordinateToPercent(util.y, mapBounds.minY, mapBounds.maxY, true) // Invert Y
                 const icon = UTILITY_ICONS[util.type] || '🎯'
 
                 return (
@@ -188,7 +201,7 @@ export function UtilityMarkers({
                         className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-20"
                         style={{
                             left: `${x}%`,
-                            bottom: `${y}%`
+                            top: `${y}%` // Use top instead of bottom since Y is inverted
                         }}
                     >
                         {/* Utility icon */}

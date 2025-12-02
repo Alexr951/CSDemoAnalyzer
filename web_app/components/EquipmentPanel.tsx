@@ -9,6 +9,7 @@ interface Equipment {
     has_helmet: boolean
     total_value: number
     health: number
+    money?: number
 }
 
 interface PlayerData {
@@ -115,6 +116,18 @@ export function EquipmentPanel({ players }: EquipmentPanelProps) {
                                         </span>
                                     </div>
                                 </div>
+
+                                {player.equipment.money !== undefined && player.equipment.money !== null && (
+                                    <div className="col-span-2">
+                                        <div className="text-zinc-500 text-xs mb-1">Money at Round Start</div>
+                                        <div className="flex items-center gap-2">
+                                            <DollarSign className="w-4 h-4 text-yellow-400" />
+                                            <span className="font-medium text-zinc-200">
+                                                ${player.equipment.money.toLocaleString()}
+                                            </span>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Position Info */}
